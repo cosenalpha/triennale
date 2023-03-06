@@ -1,0 +1,44 @@
+/* padding and border are included in the width and height */
+* {
+    box-sizing: border-box;
+    font-family: "neue-haas-grotesk-display", sans-serif;
+  }
+
+/* div generale del titolo */
+.nome {
+    display: block;
+    padding-top: 6%;
+    text-align: center;
+  }
+
+/* nome della mostra */
+#titolo {
+    font-size: 130pt;
+    line-height: 120pt;
+    font-weight: 700;
+}
+
+/* sottotitolo della mostra */
+#sottotitolo {
+    padding-top: 3%;
+    font-size: 40pt;
+    line-height: 45pt;
+}
+
+/* data e luogo della mostra */
+.info {
+    padding: 3%;
+    padding-top: 6%;
+    font-size: 50pt;
+    font-weight: 700;
+    /* utile per distribuire gli elementi dentro il div occupando tutto lo spazio */
+    display: flex;
+    justify-content: space-between;
+}
+
+#scaletta {
+    padding: 3%;
+    text-align: right;
+    font-size: 20pt;
+    font-weight: 500;
+}
