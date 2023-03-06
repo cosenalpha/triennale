@@ -42,3 +42,22 @@
     font-size: 20pt;
     font-weight: 500;
 }
+
+/* abstract in generale */
+#abstract {
+    padding: 3%;
+    font-size: 20pt;
+}
+
+/* titolo abstract */
+#abstract p {
+    font-size: 25pt;
+    font-weight: 500;
+}
+
+/* testo dell'abstract */
+#abstract span {
+    display: block;
+    padding-top: 0.5%;
+   
+}
