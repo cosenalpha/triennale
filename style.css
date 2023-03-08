@@ -1,3 +1,5 @@
+/* per i font: font-weight 300 = extralight; 400 = light; 500 = roman; 600 = medium; 700 = bold; 900 = black */
+
 /* padding and border are included in the width and height */
 * {
     box-sizing: border-box;
@@ -21,43 +23,54 @@
 /* sottotitolo della mostra */
 #sottotitolo {
     padding-top: 3%;
-    font-size: 40pt;
-    line-height: 45pt;
+    font-size: 45pt;
+    line-height: 47pt;
+    font-weight: 600;
 }
 
-/* data e luogo della mostra */
+/* data,luogo, scaletta e orario della mostra */
 .info {
     padding: 3%;
     padding-top: 6%;
-    font-size: 50pt;
-    font-weight: 700;
+    font-size: 45pt;
+    font-weight: 600;
     /* utile per distribuire gli elementi dentro il div occupando tutto lo spazio */
     display: flex;
     justify-content: space-between;
 }
 
-#scaletta {
-    padding: 3%;
+#sala {
     text-align: right;
-    font-size: 20pt;
-    font-weight: 500;
 }
 
 /* abstract in generale */
 #abstract {
     padding: 3%;
-    font-size: 20pt;
+    font-family: "neue-haas-grotesk-text", sans-serif;
+    font-size: 30pt;
+    font-weight: 600;
+    width: 75%;
 }
 
-/* titolo abstract */
-#abstract p {
-    font-size: 25pt;
+/* crediti */
+#creditsContainer {
     font-weight: 500;
+    font-size: 14pt;
+    padding: 3%;
+    width: 75%;
+    display: flex;
+    clear: both;
+}
+.creditsRow {
+    width: 33%;
+    padding-right: 3%;
 }
 
-/* testo dell'abstract */
-#abstract span {
-    display: block;
-    padding-top: 0.5%;
-   
+.creditsParagraph div, #firstCredit {
+   padding-top: 10%;
 }
+.creditsParagraph div {
+    font-weight: 600;
+}
+/* fine crediti */
+
