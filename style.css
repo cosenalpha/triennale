@@ -62,7 +62,25 @@
     font-weight: 400;
 }
 
+a {
+    display: block;
+    padding-top: 3%;
+    color: black;
+}
+
 /* crediti */
+.openSection {
+    padding: 3%;
+    background-color: white;
+    text-decoration: none;
+    width: 100%;
+    text-align: left;
+    font-weight: 600;
+    font-size: 20pt;
+    border: none;
+    display: none;
+}
+
 #creditsContainer {
     font-weight: 500;
     font-size: 14pt;
@@ -87,17 +105,37 @@
 
 /* versione mobile */
 @media only screen and (max-width: 600px) {
+    #titolo {
+        font-size: 40pt;
+        line-height: 42pt;
+    }
+    #sottotitolo {
+        font-size: 25pt;
+        line-height: 27pt;
+    }
+
     #abstract {
         width: 100%;
         font-size: 12pt;
     }
 
-    #creditsContainer {
-        display: block;
+    .openSection {
+        display: flex;
+        justify-content: space-between;
     }
 
-    #creditsRow {
+    #creditsContainer {
+        /* per mettere i crediti l'uno sotto l'altro */
+        display: none;
+    }
+
+    .creditsRow {
         width: 100%;
     }
+  
+    .info {
+        font-size: 20pt;
+    }
+
 }
 

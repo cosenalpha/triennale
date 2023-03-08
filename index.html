@@ -39,16 +39,20 @@
             <span> Interactive experiences that, through the reversal of the anthropocentric point of view, 
             propose narratives, provocations and reflections on our era and the future.</span></div>
         <div class="ita">
-            <span> Progetti di design della comunicazione, 11 narrazioni e prospettive non-umane, 
+            <span> 11 progetti di design della comunicazione, 11 narrazioni e prospettive non-umane, 
             11 macchine comunicative per riflettere sul rapporto dell’essere umano con la natura nell’epoca del climate change.</span> <br> 
             <span>11 progetti risultato di un percorso di sperimentazione didattica tra design della comunicazione, 
             speculative design, programmazione e making. </span><br>
             <span>Esperienze interattive che, attraverso il ribaltamento del punto di vista antropocentrico, 
                 propongono narrazioni, provocazioni e riflessioni sulla nostra epoca e su quella che verrà. </span>
         </div>
-         
+        <div id="instagram"><a href="https://www.instagram.com">@anthropogenicnarratives</a></div>
     </div>
 
+    <!-- bottone crediti per la versione mobile -->
+    <button class="openSection" onclick="openCredit()"><div>CREDITS</div><div>+</div></button>
+
+    <!-- crediti divisi in colonne e paragrafi -->
     <div id="creditsContainer">
         <div class="creditsRow">
             <div class="creditsParagraph" id="firstCredit">
@@ -145,7 +149,39 @@
                 Michele Venini
             </div>
         </div>     
-    </div>   
+    </div>
+    <!-- fine crediti -->
+
+    <!-- bottone per i partner -->
+    <button class="openSection" onclick="openLogos()"><div>PARTNERS</div><div>+</div></button>
+
+    <div id="partnersContainer">
+
+    </div>
+
+
+    <!-- codice aprire sezioni tramite bottoni (nella versione mobile)-->
+    <script>
+        const creditsContainer = document.getElementById("creditsContainer");
+        const logos = document.getElementById("partnersContainer");
+
+        function openCredit() {
+            if (creditsContainer.style.display == "none") {
+                creditsContainer.style.display = "block";
+            } else {
+                creditsContainer.style.display = "none";
+            }   
+        }
+
+        function openLogos() {
+            if (logos.style.display == "none") {
+                logos.style.display = "block";
+            } else {
+                logos.style.display = "none";
+            }   
+        }
+
+    </script>   
 
 </body>
 </html>
