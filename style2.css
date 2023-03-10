@@ -99,6 +99,9 @@
 }
 
 /* data,luogo, scaletta e orario della mostra */
+.dettagli {
+  padding-top: 7%;
+}
 .info {
   padding: 3%;
   /* padding-top: 6%; */
@@ -120,6 +123,7 @@
   padding: 3%;
   font-family: "neue-haas-grotesk-text", sans-serif;
   font-size: 2.5rem;
+  line-height: 2.5rem;
   font-weight: 600;
   /* width: 75%; */
 }
@@ -127,10 +131,18 @@
   display: block;
   padding-top: 0.5%;
 }
+.lingua {
+  margin: 0%;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: right;
+  align-self: top;
+}
 #programma-ita {
   padding: 3%;
   /* padding-top: 6%; */
-  font-size: 1.4rem;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
   font-weight: 600;
   /* utile per distribuire gli elementi dentro il div occupando tutto lo spazio */
   display: flex;
