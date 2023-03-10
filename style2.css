@@ -1,0 +1,227 @@
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+/* For desktop: */
+.col-1 {
+  width: 8.33%;
+}
+.col-2 {
+  width: 16.66%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-5 {
+  width: 41.66%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.33%;
+}
+.col-8 {
+  width: 66.66%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.33%;
+}
+.col-11 {
+  width: 91.66%;
+}
+.col-12 {
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+
+  [class*="col-"] {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+/* per i font: font-weight 300 = extralight; 400 = light; 500 = roman; 600 = medium; 700 = bold; 900 = black */
+
+/* padding and border are included in the width and height */
+* {
+  box-sizing: border-box;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+}
+
+/* .reaction-diffusion-container {
+    height: 200px;
+    width: 100%;
+    z-index: 3;
+  } */
+
+/* div generale del titolo */
+.nome {
+  display: flex;
+  padding-top: 6%;
+  text-align: center;
+  flex-direction: column;
+}
+
+/* nome della mostra */
+#titolo {
+  font-size: 10rem;
+  line-height: 9.5rem;
+  font-weight: 700;
+}
+
+/* sottotitolo della mostra */
+#sottotitolo {
+  padding-top: 2%;
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* data,luogo, scaletta e orario della mostra */
+.info {
+  padding: 3%;
+  /* padding-top: 6%; */
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+
+  font-weight: 600;
+  /* utile per distribuire gli elementi dentro il div occupando tutto lo spazio */
+  display: flex;
+  flex-direction: row;
+}
+
+#sala,
+#luogo {
+  text-align: right;
+}
+
+/* abstract in generale */
+#abstract {
+  padding: 3%;
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  font-size: 25pt;
+  font-weight: 600;
+  width: 75%;
+}
+#abstract span {
+  display: block;
+  padding-top: 2%;
+}
+#programma-ita {
+  padding: 3%;
+  /* padding-top: 6%; */
+  font-size: 1.4rem;
+  font-weight: 600;
+  /* utile per distribuire gli elementi dentro il div occupando tutto lo spazio */
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+#programma-eng {
+  padding: 3%;
+  font-size: 1.4rem;
+  font-weight: 400;
+  /* utile per distribuire gli elementi dentro il div occupando tutto lo spazio */
+  display: flex;
+}
+.eng {
+  padding-top: 10%;
+  font-weight: 400;
+}
+
+a {
+  display: block;
+  padding-top: 3%;
+  color: black;
+}
+
+/* crediti */
+.openSection {
+  padding: 3%;
+  background-color: white;
+  text-decoration: none;
+  width: 100%;
+  text-align: left;
+  font-weight: 600;
+  font-size: 20pt;
+  border: none;
+  display: none;
+}
+
+#creditsContainer {
+  font-weight: 500;
+  font-size: 14pt;
+  padding: 3%;
+  width: 75%;
+  display: flex;
+  clear: both;
+}
+.creditsRow {
+  width: 33%;
+  padding-right: 3%;
+}
+
+.creditsParagraph div,
+#firstCredit {
+  padding-top: 10%;
+}
+.creditsParagraph div {
+  font-weight: 600;
+}
+/* fine crediti */
+
+/* versione mobile */
+@media only screen and (max-width: 600px) {
+  #titolo {
+    font-size: 40pt;
+    line-height: 42pt;
+  }
+  #sottotitolo {
+    font-size: 20pt;
+    line-height: 22pt;
+  }
+
+  #abstract {
+    width: 100%;
+    font-size: 12pt;
+  }
+
+  .openSection {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #creditsContainer {
+    /* per mettere i crediti l'uno sotto l'altro */
+    display: none;
+  }
+
+  .creditsRow {
+    width: 100%;
+  }
+
+  .info {
+    font-size: 20pt;
+  }
+}
