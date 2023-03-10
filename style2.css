@@ -193,6 +193,7 @@ a {
 /* versione mobile */
 @media only screen and (max-width: 600px) {
   #titolo {
+    padding-top: 10%;
     font-size: 2rem;
     line-height: 2rem;
   }
