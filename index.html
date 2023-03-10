@@ -18,7 +18,7 @@
     </div>
 
     <div class="info">
-      <div id="data">22 March</div>
+      <div id="data">22.03.2023</div>
       <div id="luogo">Triennale Milano</div>
     </div>
 
@@ -34,40 +34,40 @@
     </div>
 
     <div id="abstract">
+      <div class="ita">
+        <span
+          >11 progetti di design della comunicazione, 11 narrazioni e
+          prospettive non-umane, 11 macchine comunicative per riflettere sul
+          rapporto dell’essere umano con la natura nell’epoca del climate
+          change.</span
+        ><br />
+        <span
+          >11 progetti risultato di un percorso di sperimentazione didattica tra
+          design della comunicazione, speculative design, programmazione e
+          making.</span
+        ><br />
+        <span
+          >Esperienze interattive che, attraverso il ribaltamento del punto di
+          vista antropocentrico, propongono narrazioni, provocazioni e
+          riflessioni sulla nostra epoca e su quella che verrà.</span
+        >
+      </div>
       <div class="eng">
         <span
           >11 communication design projects, 11 narratives and non-human
           perspectives, 11 communication machines to reflect on the relationship
           of the human being with nature in the era of climate change.</span
         ><br />
-        <span>
-          Projects result from an educational experimentation path between
+        <span
+          >Projects result from an educational experimentation path between
           communication design, speculative design, programming and
           making.</span
         ><br />
-        <span>
-          Interactive experiences that, through the reversal of the
+        <span
+          >Interactive experiences that, through the reversal of the
           anthropocentric point of view, propose narratives, provocations and
           reflections on our era and the future.</span
         >
-      </div>
-      <div class="ita">
-        <span>
-          11 progetti di design della comunicazione, 11 narrazioni e prospettive
-          non-umane, 11 macchine comunicative per riflettere sul rapporto
-          dell’essere umano con la natura nell’epoca del climate change.</span
-        >
-        <br />
-        <span
-          >11 progetti risultato di un percorso di sperimentazione didattica tra
-          design della comunicazione, speculative design, programmazione e
-          making. </span
-        ><br />
-        <span
-          >Esperienze interattive che, attraverso il ribaltamento del punto di
-          vista antropocentrico, propongono narrazioni, provocazioni e
-          riflessioni sulla nostra epoca e su quella che verrà.
-        </span>
       </div>
       <div id="instagram">
         <a href="https://www.instagram.com">@anthropogenicnarratives</a>
@@ -77,7 +77,7 @@
     <!-- bottone crediti per la versione mobile -->
     <button class="openSection" onclick="openCredit()">
       <div>CREDITS</div>
-      <div>+</div>
+      <div id="openCredit">+</div>
     </button>
 
     <!-- crediti divisi in colonne e paragrafi -->
@@ -195,8 +195,12 @@
       function openCredit() {
         if (creditsContainer.style.display == "none") {
           creditsContainer.style.display = "block";
+          // per cambiare il + in x
+          document.getElementById("openCredit").innerHTML = "x";
         } else {
           creditsContainer.style.display = "none";
+          // per cambiare la x in +
+          document.getElementById("openCredit").innerHTML = "+";
         }
       }
 
