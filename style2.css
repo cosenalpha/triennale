@@ -201,6 +201,9 @@ a {
     font-size: 2rem;
     line-height: 1.7rem;
   }
+  .dettagli {
+    padding-top: 10%;
+  }
   .info {
     font-size: 2rem;
     line-height: 1.7rem;
