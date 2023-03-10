@@ -56,9 +56,8 @@
     padding-top: 2%;
 }
 
-.ita {
+.eng {
     padding-top: 10%;
-    font-style: italic;
     font-weight: 400;
 }
 
@@ -110,8 +109,8 @@ a {
         line-height: 42pt;
     }
     #sottotitolo {
-        font-size: 25pt;
-        line-height: 27pt;
+        font-size: 20pt;
+        line-height: 22pt;
     }
 
     #abstract {
