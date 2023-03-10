@@ -193,12 +193,16 @@ a {
 /* versione mobile */
 @media only screen and (max-width: 600px) {
   #titolo {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  #sottotitolo {
     font-size: 1.5rem;
     line-height: 1.5rem;
   }
-  #sottotitolo {
-    font-size: 20pt;
-    line-height: 22pt;
+  .info {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
   }
 
   #abstract {
