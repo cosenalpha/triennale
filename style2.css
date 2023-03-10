@@ -194,8 +194,8 @@ a {
 @media only screen and (max-width: 600px) {
   #titolo {
     margin-top: 10%;
-    font-size: 2.3rem;
-    line-height: 2.3rem;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
   }
   #sottotitolo {
     font-size: 2rem;
