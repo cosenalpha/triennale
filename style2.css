@@ -193,17 +193,17 @@ a {
 /* versione mobile */
 @media only screen and (max-width: 600px) {
   #titolo {
-    margin-top: 10%;
-    font-size: 2.5rem;
-    line-height: 2.5rem;
+    padding-top: 30%;
+    font-size: 2.7rem;
+    line-height: 2.7rem;
   }
   #sottotitolo {
     font-size: 2rem;
-    line-height: 2rem;
+    line-height: 1.7rem;
   }
   .info {
     font-size: 2rem;
-    line-height: 2rem;
+    line-height: 1.7rem;
   }
 
   #abstract {
