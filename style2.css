@@ -344,6 +344,27 @@ a {
 }
 /* fine crediti */
 
+/* partners */
+#partnersContainer {
+  padding: 3%;
+  /* width: 80%; */
+  display: flex;
+  flex-direction: row;
+  clear: both;
+}
+.partnersRow {
+  padding-right: 3%;
+}
+
+.partnersParagraph div {
+  padding-top: 10%;
+}
+.partnersParagraph img {
+  width: 90%;
+  align-self: center;
+  align-items: center;
+}
+
 /* versione mobile */
 @media only screen and (max-width: 600px) {
   #titolo {
@@ -361,8 +382,8 @@ a {
   }
 
   .info {
-    font-size: 2rem;
-    line-height: 1.7rem;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
   }
 
   #lingua {
@@ -395,16 +416,14 @@ a {
     justify-content: space-between;
   }
 
-  #creditsContainer {
+  #creditsContainer,
+  #partnersContainer {
     /* per mettere i crediti l'uno sotto l'altro */
     display: none;
   }
 
-  .creditsRow {
+  .creditsRow,
+  .partnersRow {
     width: 100%;
-  }
-
-  .info {
-    font-size: 20pt;
   }
 }
