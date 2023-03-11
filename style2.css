@@ -480,7 +480,7 @@ a {
     width: 100%;
   }
 
-  .partnersParagraph img {
-    max-height: none;
+  .partnersParagraph div {
+    padding: 5%;
   }
 }
