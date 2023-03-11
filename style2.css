@@ -245,12 +245,18 @@ table {
 
 /* bottone per il cambio lingua */
 #lingua {
+  display: flex;
+  clear: both;
   padding: 3%;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 600;
   text-align: right;
   /* align-self: top; */
-  text-decoration: underline;
+}
+
+/* colore della lingua non impostata */
+#lingua a {
+  opacity: 30%;
 }
 
 /* abstract in generale */
