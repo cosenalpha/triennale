@@ -329,6 +329,7 @@ a {
 }
 
 #titolo_passato {
+  line-height: normal;
   text-decoration: none;
 }
 
