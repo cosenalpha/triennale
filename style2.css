@@ -297,8 +297,9 @@ table {
 /* collegamento in generale */
 a {
   display: block;
-  padding-top: 3%;
+  /* padding-top: 3%; */
   color: black;
+  text-decoration: none;
 }
 
 #instagram {
@@ -306,6 +307,7 @@ a {
   font-size: 2.5rem;
   line-height: 2.5rem;
   font-weight: 600;
+  text-decoration: underline;
 }
 
 /* crediti */
@@ -343,6 +345,16 @@ a {
   font-weight: 600;
 }
 /* fine crediti */
+
+/* link ai siti passati */
+#siti_passati {
+  padding: 3%;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  text-align: right;
+  text-decoration: underline;
+}
 
 /* partners */
 .openSection2 {
