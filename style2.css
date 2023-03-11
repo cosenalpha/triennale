@@ -250,7 +250,7 @@ table {
   padding: 3%;
   font-size: 2.2rem;
   font-weight: 600;
-  text-align: right;
+  /* text-align: right; */
   /* align-self: top; */
 }
 
@@ -316,7 +316,6 @@ a {
   font-size: 1.5rem;
   line-height: 1.5rem;
   font-weight: 600;
-  text-align: right;
 }
 
 #siti_passati a {
