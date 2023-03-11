@@ -284,13 +284,18 @@ table {
 /* programma in italiano - in realtà ha le stesse caratteristiche di quello in inglese */
 #programma-ita {
   padding: 3%;
-  /* padding-top: 6%; */
   font-size: 2.5rem;
   line-height: 2.5rem;
   font-weight: 600;
   /* utile per distribuire gli elementi dentro il div occupando tutto lo spazio */
   display: flex;
+  flex-direction: column;
   /* justify-content: space-between; */
+}
+
+#elenco_orari {
+  display: flex;
+  flex-direction: row;
 }
 
 #programma-eng {
@@ -445,6 +450,7 @@ a {
   }
 
   #videomobile {
+    margin-top: -20px;
     display: block;
   }
 
