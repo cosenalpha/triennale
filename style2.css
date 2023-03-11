@@ -1,3 +1,4 @@
+/* impostazioni di default */
 html,
 body,
 div,
@@ -119,8 +120,13 @@ table {
   border-spacing: 0;
 }
 
+/* per i font: font-weight 300 = extralight; 400 = light; 500 = roman; 600 = medium; 700 = bold; 900 = black */
+
+/* padding and border are included in the width and height */
+
 * {
   box-sizing: border-box;
+  font-family: "neue-haas-grotesk-display", sans-serif;
 }
 
 .row::after {
@@ -129,12 +135,12 @@ table {
   display: block;
 }
 
-[class*="col-"] {
-  float: left;
-  /* padding: 15px; */
-}
+/* [class*="col-"] { 
+ float: left; 
+ padding: 15px; 
+ } */
 
-/* For desktop: */
+/* For desktop: - definisco larghezza colonna  */
 .col-1 {
   width: 8.33%;
 }
@@ -173,20 +179,12 @@ table {
 }
 
 @media only screen and (max-width: 768px) {
-  /* For mobile phones: */
+  /* For mobile phones:  sempre larghezza colonna*/
 
   [class*="col-"] {
     width: 100%;
-    flex-direction: column;
+    flex-direction: row;
   }
-}
-
-/* per i font: font-weight 300 = extralight; 400 = light; 500 = roman; 600 = medium; 700 = bold; 900 = black */
-
-/* padding and border are included in the width and height */
-* {
-  box-sizing: border-box;
-  font-family: "neue-haas-grotesk-display", sans-serif;
 }
 
 /* .reaction-diffusion-container {
@@ -219,10 +217,15 @@ table {
   text-align: center;
 }
 
+/* video sostitutivo dell'effetto */
+.video {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
 /* data,luogo, scaletta e orario della mostra */
-/* .dettagli {
-  padding-top: 7%;
-} */
+/* comprende tutte le info */
 .info {
   padding: 3%;
   /* padding-top: 6%; */
@@ -234,9 +237,20 @@ table {
   flex-direction: row;
 }
 
+/* div sulla sinistra */
 #sala,
 #luogo {
   text-align: right;
+}
+
+/* bottone per il cambio lingua */
+#lingua {
+  padding: 3%;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: right;
+  align-self: top;
+  text-decoration: underline;
 }
 
 /* abstract in generale */
@@ -252,13 +266,8 @@ table {
   display: block;
   padding-top: 0.5%;
 }
-.lingua {
-  margin: 0%;
-  font-size: 2.5rem;
-  font-weight: 600;
-  text-align: right;
-  align-self: top;
-}
+
+/* programma in italiano - in realtà ha le stesse caratteristiche di quello in inglese */
 #programma-ita {
   padding: 3%;
   /* padding-top: 6%; */
@@ -270,48 +279,54 @@ table {
   /* justify-content: space-between; */
 }
 
-.video {
-  margin: 0;
-  padding: 0;
-  width: 100%;
+/* riga del testo in inglese */
+.eng {
+  padding-top: 10%;
+  /* font-weight: 400; */
 }
 
 #programma-eng {
   padding: 3%;
-  font-size: 1.4rem;
-  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  font-weight: 600;
   /* utile per distribuire gli elementi dentro il div occupando tutto lo spazio */
   display: flex;
 }
-.eng {
-  padding-top: 10%;
-  font-weight: 400;
-}
 
+/* collegamento in generale */
 a {
   display: block;
   padding-top: 3%;
   color: black;
 }
 
+#instagram {
+  padding: 3%;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  font-weight: 600;
+}
+
 /* crediti */
 .openSection {
   padding: 3%;
+  padding-top: 15%;
   background-color: white;
   text-decoration: none;
   width: 100%;
   text-align: left;
   font-weight: 600;
-  font-size: 20pt;
+  font-size: 2.5rem;
   border: none;
   display: none;
 }
 
 #creditsContainer {
   font-weight: 500;
-  font-size: 14pt;
+  font-size: 1.2rem;
   padding: 3%;
-  width: 75%;
+  width: 80%;
   display: flex;
   clear: both;
 }
@@ -340,17 +355,38 @@ a {
     font-size: 2rem;
     line-height: 1.7rem;
   }
-  .dettagli {
-    padding-top: 10%;
+
+  .video {
+    padding-top: 30%;
   }
+
   .info {
     font-size: 2rem;
     line-height: 1.7rem;
   }
 
+  #lingua {
+    font-size: 1.5rem;
+  }
+
   #abstract {
-    padding-top: 25%;
+    padding-top: 10%;
     width: 100%;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+
+  #programma-ita {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+
+  #programma-eng {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+
+  #instagram {
     font-size: 1.5rem;
   }
 
