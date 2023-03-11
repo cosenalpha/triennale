@@ -317,7 +317,14 @@ a {
   line-height: 1.5rem;
   font-weight: 600;
   text-align: right;
+}
+
+#siti_passati a {
   text-decoration: underline;
+}
+
+#titolo_passato {
+  text-decoration: none;
 }
 
 /* crediti */
@@ -451,6 +458,10 @@ a {
   #siti_passati {
     font-size: 1rem;
     line-height: 1rem;
+  }
+
+  #siti_passati p {
+    text-decoration: none;
   }
 
   .openSection,
