@@ -313,8 +313,8 @@ a {
 /* link ai siti passati */
 #siti_passati {
   padding: 3%;
-  font-size: 1.5rem;
-  line-height: 1.5rem;
+  font-size: 2rem;
+  line-height: 2rem;
   font-weight: 600;
 }
 
@@ -453,8 +453,8 @@ a {
   }
 
   #siti_passati {
-    font-size: 1rem;
-    line-height: 1rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
   }
 
   #siti_passati p {
