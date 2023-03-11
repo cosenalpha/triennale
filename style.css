@@ -281,8 +281,7 @@ table {
   padding-top: 0.5%;
 }
 
-/* programma in italiano - in realtà ha le stesse caratteristiche di quello in inglese */
-#programma-ita {
+#programma {
   padding: 3%;
   font-size: 2.5rem;
   line-height: 2.5rem;
@@ -290,21 +289,14 @@ table {
   /* utile per distribuire gli elementi dentro il div occupando tutto lo spazio */
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
 }
 
-#programma-eng {
-  padding: 3%;
-  font-size: 2.5rem;
-  line-height: 2.5rem;
-  font-weight: 600;
-  /* utile per distribuire gli elementi dentro il div occupando tutto lo spazio */
-  display: flex;
-  flex-direction: column;
-}
-#elenco_orari {
+#elenco_orari ul {
   display: flex;
   flex-direction: row;
+}
+#evento {
+  padding-left: 8px;
 }
 
 /* collegamento in generale */
