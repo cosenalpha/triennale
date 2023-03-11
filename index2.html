@@ -226,42 +226,45 @@
     <!-- fine crediti -->
 
     <!-- bottone per i partner -->
-    <button class="openSection" onclick="openLogos()">
+    <button class="openSection2" onclick="openLogos()">
       <div>PARTNERS</div>
-      <div>+</div>
+      <div id="openPartner">+</div>
     </button>
 
     <div class="partnersRow" id="partnersContainer">
       <div class="partnersParagraph">
-        <img src="./assets/logo politecnico.png" alt="AIAP" />
+        <img src="./assets/partners/AIAP.png" alt="AIAP" />
       </div>
 
       <div class="partnersParagraph">
-        <img src="./assets/logo politecnico.png" alt="Politecnico di Milano" />
+        <img
+          src="./assets/partners/SCUOLA DESIGN POLIMI.colore.png"
+          alt="Politecnico di Milano"
+        />
       </div>
 
       <div class="partnersParagraph">
-        <img src="./assets/logo politecnico.png" alt="Scuola del Design" />
+        <img src="./assets/partners/DDC.png" alt="Scuola del Design" />
       </div>
 
       <div class="partnersParagraph">
-        <img src="./assets/logo politecnico.png" alt="Triennale Milano" />
+        <img src="./assets/partners/TRIENNALE.png" alt="Triennale Milano" />
       </div>
 
       <div class="partnersParagraph">
-        <img src="./assets/logo politecnico.png" alt="Meta" />
+        <img src="./assets/partners/META.png" alt="Meta" />
       </div>
 
       <div class="partnersParagraph">
-        <img src="./assets/logo politecnico.png" alt="Baratelli" />
+        <img src="./assets/partners/BARATELLI.png" alt="Baratelli" />
       </div>
 
       <div class="partnersParagraph">
-        <img src="./assets/logo politecnico.png" alt="Sef" />
+        <img src="./assets/partners/SEF.png" alt="Sef" />
       </div>
 
       <div class="partnersParagraph">
-        <img src="./assets/logo politecnico.png" alt="ideogramma" />
+        <img src="./assets/partners/IDEOGRAMMA.png" alt="ideogramma" />
       </div>
     </div>
 
@@ -274,7 +277,7 @@
         if (creditsContainer.style.display == "none") {
           creditsContainer.style.display = "block";
           // per cambiare il + in x
-          document.getElementById("openCredit").innerHTML = "x";
+          document.getElementById("openCredit").innerHTML = "&#215";
         } else {
           creditsContainer.style.display = "none";
           // per cambiare la x in +
@@ -285,8 +288,10 @@
       function openLogos() {
         if (logos.style.display == "none") {
           logos.style.display = "block";
+          document.getElementById("openPartner").innerHTML = "&#215";
         } else {
           logos.style.display = "none";
+          document.getElementById("openPartner").innerHTML = "+";
         }
       }
     </script>

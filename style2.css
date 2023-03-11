@@ -249,7 +249,7 @@ table {
   font-size: 2.5rem;
   font-weight: 600;
   text-align: right;
-  align-self: top;
+  /* align-self: top; */
   text-decoration: underline;
 }
 
@@ -345,22 +345,47 @@ a {
 /* fine crediti */
 
 /* partners */
+.openSection2 {
+  padding: 3%;
+  padding-top: 15%;
+  background-color: white;
+  text-decoration: none;
+  width: 100%;
+  text-align: left;
+  font-weight: 600;
+  font-size: 2.5rem;
+  border: none;
+  display: none;
+}
+
 #partnersContainer {
   padding: 3%;
+  width: 100%;
   /* width: 80%; */
   display: flex;
   flex-direction: row;
   clear: both;
+  align-content: center;
+  align-items: center;
+  align-self: center;
 }
 .partnersRow {
   padding-right: 3%;
+  width: 100%;
+  /* max-height: 3rem; */
 }
 
 .partnersParagraph div {
   padding-top: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
+  max-height: 3rem;
 }
 .partnersParagraph img {
+  padding: 3%;
   width: 90%;
+  height: 100%;
+  max-height: 3rem;
   align-self: center;
   align-items: center;
 }
@@ -411,7 +436,8 @@ a {
     font-size: 1.5rem;
   }
 
-  .openSection {
+  .openSection,
+  .openSection2 {
     display: flex;
     justify-content: space-between;
   }
