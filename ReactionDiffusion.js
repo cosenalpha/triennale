@@ -76,10 +76,12 @@ var rdDef = {
 
 let helvetica, canvas, title, texture, myShader, destination;
 let result;
+let sottotitolo;
 
 function preload() {
-  helvetica = loadFont("assets/HelveticaNeueLTStd-Bd.otf")
-  title = loadImage("assets/anthro.png")
+  helvetica = loadFont("assets/HelveticaNeueLTStd-Bd.otf");
+  title = loadImage("assets/anthro.png");
+  sottotitolo = loadImage("assets/sottotitolo.png");
 }
 
 
@@ -188,6 +190,7 @@ function windowResized() {
 
   // - 1 all'height per non vedere la linea nera
   destination.resize(windowWidth, windowHeight - 0.01);
+
  
   initRD();
 }
@@ -277,7 +280,7 @@ function draw(){
   result = image(destination, 0, 0);
 
   // //prova per mettere il sottotitolo
-   //image(title, 0, 0);
+   image(sottotitolo, 0, 200);
   
 }
 
