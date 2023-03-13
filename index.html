@@ -53,22 +53,32 @@
 
     <div class="row info">
       <div class="col-6" id="orario">
-        11:00 Apertura<br />
+        <span class="it">11:00 Apertura<br />
         20:00 Chiusura
+        </span>
+        <span class="en">11:00 Opening<br />
+        20:00 Closing
+        </span>
       </div>
       <div class="col-6" id="sala">
-        Salone d'Onore<br />
-        Ingresso Libero
+        <span class="it">Salone d'Onore<br />
+          Ingresso Libero
+        </span>
+        <span class="en">Salone d'Onore<br />
+          Free Entrance
+        </span>
       </div>
+      
     </div>
 
     <div class="row">
       <div class="col-12 lingua" id="lingua">
-        <div>IT&#160</div><div><a href="indexen.html">/ EN</a></div>
+        <div><a href="#" id="itversion" class="active">IT&#160</a></div>
+        <div><a href="#" id="enversion">/ EN</a></div>
       </div>
     </div>
 
-    <div class="row">
+    <div class="row it">
       <div class="ita col-9" id="abstract">
         <span
           >11 progetti di design della comunicazione, 11 narrazioni e
@@ -88,10 +98,29 @@
         >
       </div>
     </div>
+    
+    <div class="row en">
+      <div class="col-9" id="abstract">
+        <span
+          >11 communication design projects, 11 narratives and non-human
+          perspectives, 11 communication machines to reflect on the relationship
+          of the human being with nature in the era of climate change.</span
+        ><br />
+        <span
+          >Projects result from an educational experimentation path between
+          communication design, speculative design, programming and
+          making.</span
+        ><br />
+        <span
+          >Interactive experiences that, through the reversal of the
+          anthropocentric point of view, propose narratives, provocations and
+          reflections on our era and the future.</span
+        >
+      </div>
+    </div>
 
 
-
-    <div class="row">
+    <div class="row it">
       <div class="col-12" id="programma">
         <div class="col-12">Programma</div>
  
@@ -122,6 +151,37 @@
       </div>
     </div>
 
+    <div class="row en">
+      <div class="col-12" id="programma">
+        <div class="col-12">Program</div>
+ 
+        <div id="elenco_orari">
+      <ul>
+        <li>11:00&nbsp;&nbsp;</li>
+        <li id="evento">Opening</li>
+      </ul>
+      <ul>
+        <li>12:00&nbsp;</li>
+        <li id="evento">Project video display</li>
+      </ul>
+      <ul>
+        <li>16:00&nbsp;</li>
+        <li id="evento">Project video display</li>
+      </ul>
+      <ul>
+        <li>18:00&nbsp;</li>
+        <li id="evento">Introduction of Francesco E. Guida<br>
+          Speech of Valeria Bucchetti<br>
+          Speech of Ivica Mitrovi&cacute;</li>  
+      </ul>
+      <ul>
+        <li>20:00</li>
+        <li id="evento">Closing</li>
+      </ul>
+        </div>
+      </div>
+    </div>
+
 
   
 
@@ -136,7 +196,8 @@
     <!-- link dei siti passati -->
     <div class="row">
       <div class="col-12" id="siti_passati">
-        <p id="titolo_passato">Progetti passati</p>
+        <p id="titolo_passato" class="it">Progetti passati</p>
+        <p id="titolo_passato" class="en">Past projects</p>
         <a href="http://wordsworks.labsintesi-c1.info/">WordsWorks</a>
         <a href="http://humans.labsintesi-c1.info/">Whatmakeshumanshuman?</a>
 
@@ -165,13 +226,21 @@ A.A. 2021 / 2022 Fatti di dati -->
       <!-- crediti divisi in colonne e paragrafi -->
       <div id="creditsContainer">
         <div class="creditsRow">
-          <div class="creditsParagraph" id="firstCredit">
+          <div class="creditsParagraph it" id="firstCredit">
             Progetto realizzato durante<br/>
             il corso di Sintesi Finale C1<br/>
             A.A. 2022-2023 <br/>
             Corso di Laurea in Design della Comunicazione<br/>
             Scuola del Design <br />
             Politecnico di Milano<br/>
+          </div>
+          <div class="creditsParagraph en" id="firstCredit">
+            Projects realized during the <br />
+            Final Synthesis Design Studio C1 <br />
+            A.Y. 2022-2023 <br />
+            Bachelor in Communication Design <br />
+            School of Design <br />
+            Politecnico di Milano <br />
           </div>
 
           <!-- <div class="creditsParagraph">
@@ -181,15 +250,17 @@ A.A. 2021 / 2022 Fatti di dati -->
           </div>
  -->
           <div class="creditsParagraph">
-            <div>DOCENTI</div>
+            <div class="it">DOCENTI</div>
+            <div class="en">PROFESSORS</div>
             Francesco E. Guida <br />
-            Pietro Buffa Di Castellalto <br />
+            Pietro Buffa Di Castelalto <br />
             Alessandro Masserdotti <br />
             Giacomo Scandolara
           </div>
 
           <div class="creditsParagraph">
-            <div>ASSISTENTI</div>
+            <div class="it">ASSISTENTI</div>
+            <div class="en">TEACHING ASSISTANTS</div>
             Marcello J. Biffi <br />
             Antonio Garosi <br />
             Adele Mazzali <br />
@@ -205,7 +276,8 @@ A.A. 2021 / 2022 Fatti di dati -->
           </div>
 
           <div class="creditsParagraph">
-            <div>IDENTIT&#192 VISIVA</div>
+            <div class="it">IDENTIT&#192 VISIVA</div>
+            <div class="en">GRAPHIC DESIGN</div>
             Camilla Brusadin <br />
             Martina Esposito <br />
             Federico Gajo <br />
@@ -215,7 +287,8 @@ A.A. 2021 / 2022 Fatti di dati -->
           </div>
 
           <div class="creditsParagraph">
-            <div>TESTI E TRADUZIONI</div>
+            <div class="it">TESTI E TRADUZIONI</div>
+            <div class="en">TEXT AND TRANSLATIONS</div>
             Benedetta Giugni <br />
             Chiara Lualdi <br />
             Chiara Mazzeo <br />
@@ -223,7 +296,8 @@ A.A. 2021 / 2022 Fatti di dati -->
           </div>
 
           <div class="creditsParagraph">
-            <div>FOTO E VIDEO</div>
+            <div class="it">FOTO E VIDEO</div>
+            <div class="en">PHOTOS AND VIDEOS</div>
             Emiliano Garibaldi <br />
             Nicola Maria Patitucci <br />
             Bianca Maria Sforza
@@ -232,7 +306,8 @@ A.A. 2021 / 2022 Fatti di dati -->
 
         <div class="creditsRow">
           <div class="creditsParagraph">
-            <div class="firstCredit">SITO WEB</div>
+            <div class="firstCredit it">SITO WEB</div>
+            <div class="firstCredit en">WEBSITE</div>
             Francesco Bonetti <br />
             Giuliana Concialini <br />
             Sarah Cosentino <br />
@@ -246,12 +321,13 @@ A.A. 2021 / 2022 Fatti di dati -->
           </div>
 
           <div class="creditsParagraph">
-            <div>EXHIBITION DESIGN</div>
+            <div class="it">EXHIBITION DESIGN</div>
+            <div class="en">GRAPHIC DESIGN</div>
             Andrea Borsato <br />
             Erika Caffo <br />
             Jacopo Domenichini <br />
             Selene Garresio <br />
-            Anita Ruggiu <br />
+            Anita Maria Ruggiu <br />
             Ernesto Marco Taino <br />
             Francesco Tomio <br />
             Michele Venini
@@ -351,6 +427,39 @@ A.A. 2021 / 2022 Fatti di dati -->
           document.getElementById("openPartner").innerHTML = "+";
         }
       }
+
+    const itversion = document.getElementById('itversion');
+		const enversion = document.getElementById('enversion');
+		const italianText = document.querySelectorAll('.it');
+		const englishText = document.querySelectorAll('.en');
+
+		itversion.addEventListener('click', function(event) {
+			event.preventDefault();
+			italianText.forEach(function(element) {
+      element.style.display = 'block';
+    });
+      englishText.forEach(function(element) {
+      element.style.display = 'none';
+    });
+			itversion.classList.add('active');
+			enversion.classList.remove('active');
+      itversion.style.opacity = '1';
+      enversion.style.opacity = '0.3';
+		});
+
+		enversion.addEventListener('click', function(event) {
+			event.preventDefault();
+			englishText.forEach(function(element) {
+      element.style.display = 'block';
+    });
+      italianText.forEach(function(element) {
+      element.style.display = 'none';
+    });
+			enversion.classList.add('active');
+			itversion.classList.remove('active');
+      enversion.style.opacity = '1';
+      itversion.style.opacity = '0.3';
+		});
     </script>
 
     

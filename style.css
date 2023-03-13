@@ -262,8 +262,11 @@ table {
   /* align-self: top; */
 }
 
-/* colore della lingua non impostata */
-#lingua a {
+/* peso lingua */
+#itversion{
+  opacity: 100%;
+}
+#enversion{
   opacity: 30%;
 }
 
@@ -420,6 +423,14 @@ a {
   height: 100%;
   align-self: center;
   align-items: center;
+}
+
+.it {
+  display: block;
+}
+
+.en {
+  display: none;
 }
 
 /* versione mobile */
