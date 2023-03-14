@@ -394,7 +394,7 @@ a {
   text-align: left;
 }
 
-#partnersRow{
+#partnersContainer{
   display: flex;
   flex-direction: row;
 }
@@ -405,6 +405,10 @@ a {
   padding: 8%;
   align-items: center;
   align-content: center;
+}
+
+.txtmobile {
+  display: none;
 }
 
 .it {
@@ -500,12 +504,20 @@ a {
     display: none;
   }
   
-  #partnersRow{
+  #partnersContainer{
     display: none;
   }
   
   .partner a img{
   width: 50%;
+  padding-left: 3%;
+  }
+
+  .txtmobile {
+    display: block;
+    padding-left: 3%;
+    font-weight: 600;
+    font-size: 2 rem;
   }
 
 }

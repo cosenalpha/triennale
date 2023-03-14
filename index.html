@@ -353,7 +353,7 @@ A.A. 2021 / 2022 Fatti di dati -->
         <div class="colp-3"></div>
       </div>
 
-      <div id="partnersRow">
+      <div id="partnersContainer">
         <div class="partner">
           <a href=" https://www.design.polimi.it/it" target="_blank">
             <img src="./assets/partners/POLITECNICO.png" alt="Politecnico di Milano"/>
@@ -372,11 +372,15 @@ A.A. 2021 / 2022 Fatti di dati -->
           </a>
         </div>
 
+        <div class="txtmobile partnersHeader">PATROCINIO</div>
+
         <div class="partner">
           <a href="https://aiap.it/" target="_blank"
             ><img src="./assets/partners/AIAP.png" alt="AIAP"
           /></a>
         </div>
+
+        <div class="txtmobile partnersHeader">PARTNER</div>
 
         <div class="partner">
           <a href="https://www.spaziometa.it/" target="_blank" style="margin-top: 3%">
@@ -407,15 +411,17 @@ A.A. 2021 / 2022 Fatti di dati -->
     <!-- codice aprire sezioni tramite bottoni (nella versione mobile)-->
     <script>
       const creditsContainer = document.getElementById("creditsContainer");
-      //const logos = document.getElementById("partnersContainer");
+      const logos = document.getElementById("partnersContainer");
 
       function openCredit() {
         if (creditsContainer.style.display == "none") {
           creditsContainer.style.display = "block";
+          logos.style.display = "block";
           // per cambiare il + in x
           document.getElementById("openCredit").innerHTML = "&#215";
         } else {
           creditsContainer.style.display = "none";
+          logos.style.display = "none";
           // per cambiare la x in +
           document.getElementById("openCredit").innerHTML = "+";
         }
