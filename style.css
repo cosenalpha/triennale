@@ -414,12 +414,12 @@ a {
 
 .partnersParagraph {
   width: 100%;
-  max-height: 3rem;
+  max-height: 1.5rem;
 }
 
 .partnersParagraph img {
   padding: 6%;
-  width: 90%;
+  width: 85%;
   height: 100%;
   align-self: center;
   align-items: center;
@@ -503,7 +503,7 @@ a {
   #creditsContainer,
   #partnersContainer {
     /* per mettere i crediti l'uno sotto l'altro */
-    display: none;
+    display: block;
   }
 
   .creditsRow,
@@ -512,10 +512,13 @@ a {
   }
 
   .partnersParagraph div {
-    padding: 5%;
-    max-height: 3rem;
+    padding: 20%;
+    max-height: 1.5rem;
   }
   .partnersParagraph {
     max-height: none;
+  }
+  .partnersParagraph img{
+    width: 50%;
   }
 }
