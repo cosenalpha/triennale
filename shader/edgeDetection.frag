@@ -212,7 +212,7 @@ uniform sampler2D tex0;
 uniform vec2 u_resolution;
 varying vec2 vTexCoord;
 
-const vec2 offset = vec2(1.0 / 1024.0, 1.0 / 1024.0); // offset per la lettura dei pixel circostanti
+//const vec2 offset = vec2(1.0 / 1024.0, 1.0 / 1024.0); // offset per la lettura dei pixel circostanti
 const float threshold = 0.9; // soglia per il rilevamento dei bordi
 
 void main() {
@@ -220,6 +220,8 @@ void main() {
   vec2 st = gl_FragCoord.xy / u_resolution.xy;
   
   st.y = 1.0 - st.y; // inverti la coordinata y per adattarla a WebGL, comando che mette la canva senza ribaltarla
+
+  vec2 offset = vec2(1.0 / u_resolution.x, 1.0 / u_resolution.y); // offset per la lettura dei pixel circostanti
 
   // Lettura dei pixel circostanti
   vec4 top_left = texture2D(tex0, st + vec2(-offset.x, -offset.y));

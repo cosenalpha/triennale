@@ -50,9 +50,12 @@
  var shaderfiles = {};
  var shader_grayscott;
  var shader_display;
+
+ var gl;
+ var def;
  
  // offscreen resolution scale factor.
- var SCREEN_SCALE = 1.0; 
+ var SCREEN_SCALE = 1.0 / devicePixelRatio;
  let feed2 = 0.04;
  // reaction diffusion settings and presets
  var rdDef = {
@@ -74,7 +77,7 @@
    preset7 : function() {  this.feed = 0.029; this.kill = 0.056; this.da = 0.60; this.db = 0.46; },
  };
  
- let canvas, title, texture;
+ let canvas, title, texture, test;
  
  let shaderProgram;
  let texture2;
@@ -85,14 +88,22 @@
  }
  
  function setup() { 
+
+  //pixelDensity(1)
+  pixelDensity(1)
    
    // webgl canvas
-   canvas = createCanvas(windowWidth, windowHeight, WEBGL);
+   canvas = createCanvas(windowWidth * devicePixelRatio, windowHeight * devicePixelRatio, WEBGL).parent(document.getElementById("container"));
+  //  document.querySelector("canvas").style.width = "50%";
+  //  canvas = createCanvas(window.innerWidth, window.innerHeight, WEBGL).parent(document.getElementById("#container"));
    console.log(canvas);
-   document.getElementById("#container").appendChild(document.querySelector("canvas"));
+   //document.getElementById("#container").appendChild(document.querySelector("canvas"));
+
+   document.querySelector("canvas").style.width = window.innerWidth + "px";
+   document.querySelector("canvas").style.height = window.innerHeight + "px";
    
    // webgl context
-   var gl = this._renderer.GL;
+  gl = this._renderer.GL;
    
    // webgl version (1=webgl1, 2=webgl2)
    var VERSION = gl.getVersion();
@@ -107,7 +118,7 @@
    fbo = gl.newFramebuffer();
  
    // create Textures for multipass rendering
-   var def = {
+  def = {
       target   : gl.TEXTURE_2D
      ,iformat  : gl.RGBA32F
      ,format   : gl.RGBA
@@ -123,7 +134,7 @@
    tex.src = gl.newTexture(tex_w, tex_h, def);
    tex.dst = gl.newTexture(tex_w, tex_h, def);
  
-   texture = gl.newTexture(title.width, title.height, title)
+  //  texture = gl.newTexture(title.width, title.height, title)
  
    
    // Shader source, depending on available webgl version
@@ -140,19 +151,56 @@
  
  
  function windowResized() {
-   if(!fbo) return;
-   var w = windowWidth;
-   var h = windowHeight;
-   canvas = resizeCanvas(windowWidth, windowHeight);
+  remove();
+  window.location.reload();
+
+  //  if(!fbo) return;
+  //  var w = windowWidth;
+  //  var h = windowHeight;
+  //  pixelDensity(1)
+  //  canvas = resizeCanvas(windowWidth * devicePixelRatio, windowHeight * devicePixelRatio);
+
+  //  document.querySelector("canvas").style.width = window.innerWidth + "px";
+  //  document.querySelector("canvas").style.height = window.innerHeight + "px";
    
-   var tex_w = ceil(w * SCREEN_SCALE);
-   var tex_h = ceil(h * SCREEN_SCALE);
+  //  var tex_w = ceil(width * SCREEN_SCALE);
+  //  var tex_h = ceil(height * SCREEN_SCALE);
    
-   tex.src.resize(tex_w, tex_h);
-   tex.dst.resize(tex_w, tex_h);
+  //  tex.src.resize(tex_w, tex_h);
+  //  tex.dst.resize(tex_w, tex_h);
  
-   initRD();
+  //  initRD();
   
+  // console.log("RESIZE")
+
+
+
+
+  //  var w = windowWidth;
+  //  var h = windowHeight;
+
+  //  pixelDensity(1)
+   
+  //  canvas = resizeCanvas(windowWidth * devicePixelRatio, windowHeight * devicePixelRatio, WEBGL);
+
+  //  document.querySelector("canvas").style.width = window.innerWidth + "px";
+  //  document.querySelector("canvas").style.height = window.innerHeight + "px";
+   
+  //  var tex_w = ceil(width * SCREEN_SCALE);
+  //  var tex_h = ceil(height * SCREEN_SCALE);
+ 
+  //  tex.src = gl.newTexture(tex_w, tex_h, def);
+  //  tex.dst = gl.newTexture(tex_w, tex_h, def);
+   
+  //  // Shader source, depending on available webgl version
+  //  var fs_grayscott = shaderfiles["webgl"+VERSION+".fs_grayscott"];
+  //  var fs_display   = shaderfiles["webgl"+VERSION+".fs_display"];
+  //  // crreate Shader
+  //  shader_grayscott = new Shader(gl, {fs:fs_grayscott});
+  //  shader_display   = new Shader(gl, {fs:fs_display});
+  
+   // place initial samples
+   initRD();
  }
    
  // *************************************** QUA SI CAMBIANO I COLORI ************************//
@@ -169,7 +217,7 @@
  ];
  
  function draw(){
-   pixelDensity(1);
+  //  pixelDensity(2);
  
    background(255, 255, 255);
  
@@ -197,10 +245,16 @@
    let scale = 0.8;
  
    imageMode(CENTER);
-   image(title, 0, 0, scale*w, scale*w/title.width * title.height);
+  //  image(title, 0, 0, scale*w, scale*w/title.width * title.height);
+    image(title, 0, 0, scale*width, scale * width * title.height/title.width);
+    
+
+ 
    
     // Set the shader active
     shader(shaderProgram);
+
+    
  
     // Pass the texture to the shader
     shaderProgram.setUniform('tex0', canvas);
