@@ -1,0 +1,403 @@
+/* impostazioni di default */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* per i font: font-weight 300 = extralight; 400 = light; 500 = roman; 600 = medium; 700 = bold; 900 = black */
+
+/* padding and border are included in the width and height */
+
+* {
+  box-sizing: border-box;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* [class*="col-"] { 
+ float: left; 
+ padding: 15px; 
+ } */
+
+/* For desktop: - definisco larghezza colonna  */
+.col-1 {
+  width: 8.33%;
+}
+.col-2 {
+  width: 16.66%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-5 {
+  width: 41.66%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.33%;
+}
+.col-8 {
+  width: 66.66%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.33%;
+}
+.col-11 {
+  width: 91.66%;
+}
+.col-12 {
+  width: 100%;
+}
+
+/* for partners*/
+
+.colp-1 {
+  width: 12.5%;
+}
+.colp-3 {
+  width: 37.5%;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones:  sempre larghezza colonna*/
+
+  [class*="col-"] {
+    width: 100%;
+    flex-direction: row;
+  }
+}
+
+/* bottone per il cambio lingua */
+#lingua {
+  display: flex;
+  clear: both;
+  padding: 3%;
+  font-size: 2.2rem;
+  font-weight: 600;
+  /* text-align: right; */
+  /* align-self: top; */
+}
+
+/* peso lingua */
+#itversion{
+  opacity: 100%;
+}
+#enversion{
+  opacity: 30%;
+}
+
+/* abstract in generale */
+#abstract {
+  padding: 3%;
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  font-weight: 600;
+  /* width: 75%; */
+}
+#abstract span {
+  display: block;
+  padding-top: 0.5%;
+}
+
+#programma {
+  padding: 3%;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  font-weight: 600;
+  /* utile per distribuire gli elementi dentro il div occupando tutto lo spazio */
+  display: flex;
+  flex-direction: column;
+}
+
+#elenco_orari ul {
+  display: flex;
+  flex-direction: row;
+}
+#evento {
+  padding-left: 8px;
+}
+
+/* collegamento in generale */
+a {
+  display: block;
+  /* padding-top: 3%; */
+  color: black;
+  text-decoration: none;
+}
+
+#instagram {
+  padding: 3%;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* link ai siti passati */
+#siti_passati {
+  padding: 3%;
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+#siti_passati a {
+  text-decoration: underline;
+}
+
+#titolo_passato {
+  line-height: normal;
+  text-decoration: none;
+}
+
+/* crediti */
+.openSection {
+  padding: 3%;
+  padding-top: 15%;
+  background-color: white;
+  text-decoration: none;
+  width: 100%;
+  text-align: left;
+  font-weight: 600;
+  font-size: 2.2rem;
+  border: none;
+  display: none;
+}
+
+#container {width: 100%; height: 100%; position: relative; overflow-x: hidden;}
+
+#creditsContainer {
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 3%;
+  width: 80%;
+  display: flex;
+  clear: both;
+}
+.creditsRow {
+  width: 33%;
+  padding-right: 3%;
+}
+
+.creditsParagraph div,
+#firstCredit {
+  padding-top: 10%;
+}
+.creditsParagraph div {
+  font-weight: 600;
+}
+/* fine crediti */
+
+.partnersHeader{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1%;
+}
+
+.partnersHeader p{
+  font-family: neue-haas-grotesk-text;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+#partnersContainer{
+  display: flex;
+  flex-direction: row;
+}
+
+.partner a img{
+  display: flex;
+  width: 100%;
+  padding: 8%;
+  align-items: center;
+  align-content: center;
+}
+
+.txtmobile {
+  display: none;
+}
+
+.it {
+  display: block;
+}
+
+.en {
+  display: none;
+}
+
+/* versione mobile */
+@media only screen and (max-width: 600px) {
+  #titolo {
+    padding-top: 30%;
+    font-size: 2.5rem;
+    line-height: 2.7rem;
+  }
+  #sottotitolo {
+    font-size: 1.8rem;
+    line-height: 1.7rem;
+  }
+
+  /* .video {
+    padding-top: 30%;
+  } */
+
+  #videobig {
+    display: none;
+  }
+
+  #videomobile {
+    margin-top: -20px;
+    display: block;
+  }
+
+  .info {
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+  }
+
+  #lingua {
+    font-size: 1.2rem;
+  }
+
+  #abstract {
+    padding-top: 10%;
+    width: 100%;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+
+  #programma {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+
+  #instagram {
+    font-size: 1.2rem;
+  }
+
+  #siti_passati {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+
+  #siti_passati p {
+    text-decoration: none;
+  }
+
+  .openSection,
+  .openSection2 {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    color: black;
+  }
+
+  #creditsContainer {
+    display: none;
+  }
+
+  .creditsRow {
+    width: 100%;
+    padding-right: 3%;
+  }
+
+  .partnersHeader{
+    display: block;
+    margin-bottom: 1%;
+  }
+  
+  .partnersHeader p{
+    display: none;
+  }
+  
+  #partnersContainer{
+    display: none;
+  }
+  
+  .partner a img{
+  width: 50%;
+  padding-left: 3%;
+  }
+
+  .txtmobile {
+    display: block;
+    padding-left: 3%;
+    font-weight: 600;
+  }
+
+  .container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+  }
+
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    max-height: 100vh;
+  }
+
+  /* canvas, .container {
+
+    width: 100vw;
+    height: 100vh;
+  } */
+}
