@@ -96,7 +96,7 @@
    canvas = createCanvas(windowWidth * devicePixelRatio, windowHeight * devicePixelRatio, WEBGL).parent(document.getElementById("container"));
   //  document.querySelector("canvas").style.width = "50%";
   //  canvas = createCanvas(window.innerWidth, window.innerHeight, WEBGL).parent(document.getElementById("#container"));
-   console.log(canvas);
+   
    //document.getElementById("#container").appendChild(document.querySelector("canvas"));
 
    document.querySelector("canvas").style.width = window.innerWidth + "px";
@@ -151,8 +151,12 @@
  
  
  function windowResized() {
+
+  if (window.innerWidth > 450) { 
   remove();
   window.location.reload();
+  }
+
 
   //  if(!fbo) return;
   //  var w = windowWidth;
@@ -333,7 +337,6 @@
      shader_grayscott.uniformT("tex"   , tex.src);
      shader_grayscott.quad();
      shader_grayscott.end();
-     console.log("updateRD");
      // < native p5 here
      if(mouseIsPressed){
        resetShader();
