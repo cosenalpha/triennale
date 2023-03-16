@@ -455,13 +455,13 @@ a {
     height: 100vh;
   }
 
-  /* canvas {
+  canvas {
     position: absolute;
     top: 0;
     left: 0;
     max-width: 100%;
     max-height: 100vh;
-  } */
+  }
 
   /* canvas, .container {
 
