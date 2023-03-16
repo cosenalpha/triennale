@@ -1,0 +1,273 @@
+/* impostazioni di default */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+body {overflow-x: hidden;}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* per i font: font-weight 300 = extralight; 400 = light; 500 = roman; 600 = medium; 700 = bold; 900 = black */
+
+/* padding and border are included in the width and height */
+
+* {
+  box-sizing: border-box;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* [class*="col-"] { 
+   float: left; 
+   padding: 15px; 
+   } */
+
+/* For desktop: - definisco larghezza colonna  */
+.col-1 {
+  width: 8.33%;
+}
+.col-2 {
+  width: 16.66%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-5 {
+  width: 41.66%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.33%;
+}
+.col-8 {
+  width: 66.66%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.33%;
+}
+.col-11 {
+  width: 91.66%;
+}
+.col-12 {
+  width: 100%;
+}
+
+/* for partners*/
+
+.colp-1 {
+  width: 12.5%;
+}
+.colp-3 {
+  width: 37.5%;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones:  sempre larghezza colonna*/
+
+  [class*="col-"] {
+    width: 100%;
+    flex-direction: row;
+  }
+}
+
+/* header */
+.navbar {
+  display: flex;
+  min-height: 64px;
+  width: 100%;
+  position: fixed;
+  z-index: 5;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+.icon-container {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+.icon2-container {
+  margin-right: auto;
+  padding: 3%;
+  /* min-width: 24px; */
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+.icon2-container img {
+  height: 24px;
+}
+
+.text-container {
+  padding: 3%;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  flex-direction: row;
+}
+
+.text-container a,
+.text-container p {
+  padding: 3%;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-right: 20px;
+}
+
+/* menu a tendina */
+.hamburger {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .text-container {
+    position: fixed;
+    left: -120%; /* serve per la transizione */
+    top: 64px; /* se diventa 0 arriva in cima alla pagina, ma non so come trasformare l'icona dell'hamburger in una x per chiudere il menu */
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+  }
+
+  .text-container.active {
+    left: 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  /* non so come mettere il logo parte del menu */
+  #logo {
+    display: none;
+  }
+}
+
+/* collegamento in generale */
+a {
+  display: block;
+  /* padding-top: 3%; */
+  color: black;
+  text-decoration: none;
+}
+
+/* lista in generale */
+
+#container-progetti  {position: relative; margin-top: 20vh;}
+
+.elenco_progetti {
+  padding: 0 3%;
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  font-size: 3.5rem;
+  line-height: 4rem;
+  font-weight: 600;
+  z-index: 4;
+  position: relative;
+}
+
+.fill {
+  display: block;
+}
+.border {
+  display: none;
+}
+
+.nome-progetto {
+  height: 10vh;
+  margin: 5vh 0;
+}
+
+img {
+  height: 100%
+}
+
+.nome-progetto:hover .fill {
+  display: none;
+}
+.nome-progetto:hover .border {
+  display: block;
+}
+
+#container-immagine {
+  height: 60vh; width: 60vh;
+  position: fixed; top: 50vh; right: 40vh;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+#container-immagine :nth-child(n) {
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0; left: 0;
+  display: none;
+}
+
+/* versione mobile */
+@media only screen and (max-width: 600px) {
+  .elenco_progetti {
+    padding-top: 10%;
+    width: 100%;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+}

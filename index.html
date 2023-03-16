@@ -2,12 +2,12 @@
 <html>
   <head>
     <title>Anthropogenic Narratives</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- matchare la larghezza della pagina con la larghezza del device -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- font neue haas grotesk display e neue haas grotesk text -->
     <link rel="stylesheet" href="https://use.typekit.net/qon0ldf.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="stylehome.css" />
 
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> -->
 
@@ -15,481 +15,134 @@
     <script src="ShaderRD.js" type="text/javascript"></script>
     <script src="ShaderDisplay.js" type="text/javascript"></script>
     <script src="p5-bugs.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js" type="text/javascript"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"
+      type="text/javascript"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/EasePack.min.js"></script>
 
 
   </head>
+
   <body>
+    <!-- <header class="header"> -->
+    <nav class="navbar">
+      <div class="hamburger icon2-container">
+        <img src="./assets/hamburger.png" alt="hamburger" />
+      </div>
+
+      <div class="icon2-container">
+        <img id="logo" src="./assets/anthro.png" alt="logo" />
+      </div>
+
+      <div class="icon-container">
+        <ul class="text-container">
+          <li class="nav-item">
+            <a href="" class="nav-link"><p>ABOUT</p></a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link"><p>EXHIBITION</p></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="container">
+      <!-- spazio per l'effetto -->
+      
+          <div style="
+          background: rgb(255,255,255);
+          background: linear-gradient(0deg, rgb(255, 255, 255, 1) 0%, rgb(255, 255, 255, 1) 5%, rgba(255, 255, 255, 0) 100%); 
+          position: absolute; bottom: 0; z-index: 3;
+          width: 100%; height: 40%"></div>
+          </div>
+      
+    </div>
+    <!-- </header> -->
+
+    <div id="container-progetti">
+
+      <div class="elenco_progetti row">
+        <ul class="col-12">
   
-     
-   <div id="container">
-<!-- spazio per l'effetto -->
-
-    <div style="
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgb(255, 255, 255, 1) 0%, rgb(255, 255, 255, 1) 5%, rgba(255, 255, 255, 0) 100%); 
-    position: absolute; bottom: 0; z-index: 3;
-    width: 100%; height: 40%"></div>
-    </div>
-
-  </div>
-
-
-   <!-- 
-  <div class="row">
-    <div class="col-12" id="sottotitolo">
-      Communicating and Experiencing<br />
-      Non-Human Perspectives
-    </div>
-  </div>
-   -->
-
-    <!-- <div class="row">
-      <div class="col-12 video">
-        <video id="videobig" width="100%" autoplay muted loop playsinline>
-          <source src="./assets/web_pc_3.mp4" type="video/mp4" />
-          <p>Il tuo browser non supporta il video.</p>
-        </video>
-
-        <video id="videomobile" width="100%" autoplay muted loop playsinline>
-          <source src="./assets/web_responsive.mp4" type="video/mp4" />
-          <p>Il tuo browser non supporta il video.</p>
-        </video>
+          <a href="projects/01_WWW.html">
+            <div class="nome-progetto">
+              <img class="fill" src="./assets/logo politecnico.png" />
+              <img class="border" src="./assets/anthro.png" />
+            </div>
+          </a>
+          <a href="projects/01_WWW.html">
+            <div class="nome-progetto">
+              <img class="fill" src="./assets/logo politecnico.png" />
+              <img class="border" src="./assets/anthro.png" />
+            </div>
+          </a>
+          <a href="projects/01_WWW.html">
+            <div class="nome-progetto">
+              <img class="fill" src="./assets/logo politecnico.png" />
+              <img class="border" src="./assets/anthro.png" />
+            </div>
+          </a>
+          <a href="projects/01_WWW.html">
+            <div class="nome-progetto">
+              <img class="fill" src="./assets/logo politecnico.png" />
+              <img class="border" src="./assets/anthro.png" />
+            </div>
+          </a>
+          <a href="projects/01_WWW.html">
+            <div class="nome-progetto">
+              <img class="fill" src="./assets/logo politecnico.png" />
+              <img class="border" src="./assets/anthro.png" />
+            </div>
+          </a>
+          <a href="projects/01_WWW.html">
+            <div class="nome-progetto">
+              <img class="fill" src="./assets/logo politecnico.png" />
+              <img class="border" src="./assets/anthro.png" />
+            </div>
+          </a>
+          <a href="projects/01_WWW.html">
+            <div class="nome-progetto">
+              <img class="fill" src="./assets/logo politecnico.png" />
+              <img class="border" src="./assets/anthro.png" />
+            </div>
+          </a>
+          <a href="projects/01_WWW.html">
+            <div class="nome-progetto">
+              <img class="fill" src="./assets/logo politecnico.png" />
+              <img class="border" src="./assets/anthro.png" />
+            </div>
+          </a>
+          <a href="projects/01_WWW.html">
+            <div class="nome-progetto">
+              <img class="fill" src="./assets/logo politecnico.png" />
+              <img class="border" src="./assets/anthro.png" />
+            </div>
+          </a>
+         
+  
+        </ul>
       </div>
-    </div> -->
-
-    <div>
-
-    <div class="row info">
-      <div class="col-6" id="data">22.03.2023</div>
-      <div class="col-6" id="luogo">Triennale Milano</div>
-    </div>
-
-    <div class="row info">
-      <div class="col-6" id="orario">
-        <span class="it">11:00 Apertura<br />
-        20:00 Chiusura
-        </span>
-        <span class="en">11:00 Opening<br />
-        20:00 Closing
-        </span>
-      </div>
-      <div class="col-6" id="sala">
-        <span class="it">Salone d'Onore<br />
-          Ingresso Libero
-        </span>
-        <span class="en">Salone d'Onore<br />
-          Free Entrance
-        </span>
+  
+      <div id="container-immagine">
+        <img src="assets/anthro.png" alt="">
+        <img src="assets/hamburger.png" alt="">
+        <img src="assets/anthro.png" alt="">
+        <img src="assets/hamburger.png" alt="">
+        <img src="assets/anthro.png" alt="">
+        <img src="assets/hamburger.png" alt="">
+        <img src="assets/anthro.png" alt="">
+        <img src="assets/hamburger.png" alt="">
       </div>
       
     </div>
-    
 
-    <div class="row">
-      <div class="col-12 lingua" id="lingua">
-        <div><a href="#" id="itversion" class="active">IT&#160</a></div>
-        <div><a href="#" id="enversion">/ EN</a></div>
-      </div>
-    </div>
-
-    <div class="row it">
-      <div class="ita col-9" id="abstract">
-        <span
-          >11 progetti di design della comunicazione, 11 narrazioni e
-          prospettive non-umane, 11 macchine comunicative per riflettere sul
-          rapporto dell&apos;essere umano con la natura nell&apos;epoca del climate
-          change.</span
-        ><br />
-        <span
-          >11 progetti risultato di un percorso di sperimentazione didattica tra
-          design della comunicazione, speculative design, programmazione e
-          making.</span
-        ><br />
-        <span
-          >Esperienze interattive che, attraverso il ribaltamento del punto di
-          vista antropocentrico, propongono narrazioni, provocazioni e
-          riflessioni sulla nostra epoca e su quella che verr&agrave;.</span
-        >
-      </div>
-    </div>
-    
-  
-
-    <div class="row en">
-      <div class="col-9" id="abstract">
-        <span
-          >11 communication design projects, 11 narratives and non-human
-          perspectives, 11 communication machines to reflect on the relationship
-          of the human being with nature in the era of climate change.</span
-        ><br />
-        <span
-          >Projects result from an educational experimentation path between
-          communication design, speculative design, programming and
-          making.</span
-        ><br />
-        <span
-          >Interactive experiences that, through the reversal of the
-          anthropocentric point of view, propose narratives, provocations and
-          reflections on our era and the future.</span
-        >
-      </div>
-    </div>
-
-
-    <div class="row it">
-      <div class="col-12" id="programma">
-        <div class="col-12">Programma</div>
- 
-        <div id="elenco_orari">
-      <ul>
-        <li>11:00&nbsp;&nbsp;</li>
-        <li id="evento">Apertura</li>
-      </ul>
-      <ul>
-        <li>12:00&nbsp;</li>
-        <li id="evento">Proiezione video progetti</li>
-      </ul>
-      <ul>
-        <li>16:00&nbsp;</li>
-        <li id="evento">Proiezione video progetti</li>
-      </ul>
-      <ul>
-        <li>18:00&nbsp;</li>
-        <li id="evento">Presentazione di Francesco E. Guida &#40Politecnico Di Milano&#41<br>
-          Saluti istituzionali di Valeria Bucchetti &#40Politecnico Di Milano&#41 e Marco Tortoioli &#40AIAP&#41<br>
-          Talk di Ivica Mitrovi&cacute; &#40Arts Academy, Split&#41</li>  
-      </ul>
-      <ul>
-        <li>20:00</li>
-        <li id="evento">Chiusura</li>
-      </ul>
-        </div>
-      </div>
-    </div>
-
-  
-
-    <div class="row en">
-      <div class="col-12" id="programma">
-        <div class="col-12">Program</div>
- 
-        <div id="elenco_orari">
-      <ul>
-        <li>11:00&nbsp;&nbsp;</li>
-        <li id="evento">Opening</li>
-      </ul>
-      <ul>
-        <li>12:00&nbsp;</li>
-        <li id="evento">Projects videos display</li>
-      </ul>
-      <ul>
-        <li>16:00&nbsp;</li>
-        <li id="evento">Projects videos display</li>
-      </ul>
-      <ul>
-        <li>18:00&nbsp;</li>
-        <li id="evento">Introduction of Francesco E. Guida &#40Politecnico Di Milano&#41<br>
-          Speeches by Valeria Bucchetti &#40Politecnico Di Milano&#41 and Marco Tortoioli &#40AIAP&#41<br>
-          Talk by Ivica Mitrovi&cacute; &#40Arts Academy, Split&#41</li>  
-      </ul>
-      <ul>
-        <li>20:00</li>
-        <li id="evento">Closing</li>
-      </ul>
-        </div>
-      </div>
-    </div>
-
-
-  
-
-    <div class="row">
-      <div id="instagram">
-        <a href="https://www.instagram.com/anthropogenicnarratives/"
-          >@anthropogenicnarratives</a
-        >
-      </div>
-    </div>
-
-    <!-- link dei siti passati -->
-    <div class="row">
-      <div class="col-12" id="siti_passati">
-        <p id="titolo_passato" class="it">Progetti passati</p>
-        <p id="titolo_passato" class="en">Past projects</p>
-        <a href="http://wordsworks.labsintesi-c1.info/" target="_blank">WordsWorks</a>
-        <a href="http://humans.labsintesi-c1.info/" target="_blank">What makes humans human?</a>
-
-        <a href="http://morte13.labsintesi-c1.info/" target="_blank">Morte. 13 solidi dubbi</a>
-        <a href="http://retuals.labsintesi-c1.info/" target="_blank">Retuals</a>
-        <a href="http://fattididati.labsintesi-c1.info/home.html" target="_blank"
-          >Fatti_di_dati</a
-        >
-
-      </div>
-    </div>
-<!-- 
-    A.A. 2017 / 2018 Words Works
-A.A. 2018 / 2019 What makes humans human?
-A.A. 2019 / 2020 Morte - 13 solidi dubbi
-A.A. 2020 / 2021 Retuals
-A.A. 2021 / 2022 Fatti di dati -->
-
-    <div class="row">
-      <!-- bottone crediti per la versione mobile -->
-      <button class="openSection" onclick="openCredit()">
-        <div>CREDITS</div>
-        <div id="openCredit">+</div>
-      </button>
-
-      <!-- crediti divisi in colonne e paragrafi -->
-      <div id="creditsContainer">
-        <div class="creditsRow">
-          <div class="creditsParagraph it" id="firstCredit">
-            Progetto realizzato durante<br/>
-            il corso di Sintesi Finale C1<br/>
-            A.A. 2022-2023 <br/>
-            Corso di Laurea in Design della Comunicazione<br/>
-            Scuola del Design <br />
-            Politecnico di Milano<br/>
-          </div>
-          <div class="creditsParagraph en" id="firstCredit">
-            Projects realized during the <br />
-            Final Synthesis Design Studio C1 <br />
-            A.Y. 2022-2023 <br />
-            Bachelor in Communication Design <br />
-            School of Design <br />
-            Politecnico di Milano <br />
-          </div>
-
-          <div class="creditsParagraph">
-            <div class="it">DOCENTI</div>
-            <div class="en">PROFESSORS</div>
-            Francesco E. Guida <br />
-            Pietro Buffa Di Castelalto <br />
-            Alessandro Masserdotti <br />
-            Giacomo Scandolara
-          </div>
-
-          <div class="creditsParagraph">
-            <div class="it">ASSISTENTI</div>
-            <div class="en">TEACHING ASSISTANTS</div>
-            Marcello J. Biffi <br />
-            Antonio Garosi <br />
-            Adele Mazzali <br />
-            Claudia Tranti
-          </div>
-        </div>
-
-        <div class="creditsRow">
-          <div class="creditsParagraph">
-            <div class="firstCredit">PROJECT MANAGER</div>
-            Ginevra Bernasconi <br />
-            Andrea Francesco Vitali
-          </div>
-
-          <div class="creditsParagraph">
-            <div class="it">IDENTIT&#192 VISIVA</div>
-            <div class="en">GRAPHIC DESIGN</div>
-            Camilla Brusadin <br />
-            Martina Esposito <br />
-            Federico Gajo <br />
-            Enrico Isidori <br />
-            Martina La Macchia <br />
-            Camilla Tosi
-          </div>
-
-          <div class="creditsParagraph">
-            <div class="it">TESTI E TRADUZIONI</div>
-            <div class="en">TEXT AND TRANSLATIONS</div>
-            Benedetta Giugni <br />
-            Chiara Lualdi <br />
-            Francesco Scarfone
-          </div>
-
-          <div class="creditsParagraph">
-            <div class="it">FOTO E VIDEO</div>
-            <div class="en">PHOTOS AND VIDEOS</div>
-            Emiliano Garibaldi <br />
-            Nicola Maria Patitucci <br />
-            Bianca Maria Sforza
-          </div>
-        </div>
-
-        <div class="creditsRow">
-          <div class="creditsParagraph">
-            <div class="firstCredit it">SITO WEB</div>
-            <div class="firstCredit en">WEBSITE</div>
-            Francesco Bonetti <br />
-            Giuliana Concialini <br />
-            Sarah Cosentino <br />
-            Clara Di Bella <br />
-            Agostino Sanna
-          </div>
-
-          <div class="creditsParagraph">
-            <div>SOCIAL MEDIA</div>
-            Bianca Maria Sforza <br />
-            Chiara Mazzeo 
-          </div>
-
-          <div class="creditsParagraph">
-            <div class="it">EXHIBITION DESIGN</div>
-            <div class="en">GRAPHIC DESIGN</div>
-            Andrea Borsato <br />
-            Erika Caffo <br />
-            Jacopo Domenichini <br />
-            Selene Garresio <br />
-            Anita Maria Ruggiu <br />
-            Ernesto Marco Taino <br />
-            Francesco Tomio <br />
-            Michele Venini
-          </div>
-        </div>
-      </div>
-    </div>
-      
-    
-    <!-- fine crediti -->
-
-
-
-    <!-- bottone per i partner -->
-
-    <!-- <button class="openSection2" onclick="openLogos()">
-      <div>PARTNERS</div>
-      <div id="openPartner">+</div>
-    </button> -->
-
-      <div class="partnersHeader">
-        <div class="colp-3"></div>
-        <div class="colp-1">
-          <p>PATROCINIO</p>
-        </div>
-        <div class="colp-1">
-          <p>PARTNER</p>
-        </div>
-        <div class="colp-3"></div>
-      </div>
-
-      <div id="partnersContainer">
-        <div class="partner">
-          <a href=" https://www.design.polimi.it/it" target="_blank">
-            <img src="./assets/partners/POLITECNICO.png" alt="Politecnico di Milano"/>
-          </a>
-        </div>
-
-        <div class="partner">
-          <a href="https://www.designdellacomunicazione.polimi.it/" target="_blank">
-            <img src="./assets/partners/DDC.png" alt="Scuola del Design"/>
-          </a>
-        </div>
-
-        <div class="partner">
-          <a href="https://triennale.org/" target="_blank">
-            <img src="./assets/partners/TRIENNALE.png" alt="Triennale Milano" />
-          </a>
-        </div>
-
-        <div class="txtmobile partnersHeader">PATROCINIO</div>
-
-        <div class="partner">
-          <a href="https://aiap.it/" target="_blank"
-            ><img src="./assets/partners/AIAP.png" alt="AIAP"
-          /></a>
-        </div>
-
-        <div class="txtmobile partnersHeader">PARTNER</div>
-
-        <div class="partner">
-          <a href="https://www.spaziometa.it/" target="_blank" style="margin-top: 3%">
-            <img src="./assets/partners/META.png" alt="Meta" />
-          </a>
-        </div>
-
-        <div class="partner">
-          <a href="https://www.ideogramma.com/" target="_blank">
-            <img src="./assets/partners/IDEOGRAMMA.png" alt="ideogramma" />
-          </a>
-        </div>
-
-        <div class="partner">
-          <a href="https://baratelli.it/" target="_blank">
-            <img src="./assets/partners/BARATELLI.png" alt="Baratelli" />
-          </a>
-        </div>
-
-        <div class="partner">
-          <a href="http://www.grafichemainardi.com/" target="_blank">
-            <img src="./assets/partners/SEF.png" alt="Sef" />
-          </a>
-        </div>
-      </div>
-
-
-    <!-- codice aprire sezioni tramite bottoni (nella versione mobile)-->
-    <script>
-      const creditsContainer = document.getElementById("creditsContainer");
-      const logos = document.getElementById("partnersContainer");
-
-      function openCredit() {
-        if (creditsContainer.style.display == "none") {
-          creditsContainer.style.display = "block";
-          logos.style.display = "block";
-          // per cambiare il + in x
-          document.getElementById("openCredit").innerHTML = "&#215";
-        } else {
-          creditsContainer.style.display = "none";
-          logos.style.display = "none";
-          // per cambiare la x in +
-          document.getElementById("openCredit").innerHTML = "+";
-        }
-      }
-
-      /*function openLogos() {
-        if (logos.style.display == "none") {
-          logos.style.display = "block";
-          document.getElementById("openPartner").innerHTML = "&#215";
-        } else {
-          logos.style.display = "none";
-          document.getElementById("openPartner").innerHTML = "+";
-        }
-      } */
-
-    const itversion = document.getElementById('itversion');
-		const enversion = document.getElementById('enversion');
-		const italianText = document.querySelectorAll('.it');
-		const englishText = document.querySelectorAll('.en');
-
-		itversion.addEventListener('click', function(event) {
-			event.preventDefault();
-			italianText.forEach(function(element) {
-      element.style.display = 'block';
-    });
-      englishText.forEach(function(element) {
-      element.style.display = 'none';
-    });
-			itversion.classList.add('active');
-			enversion.classList.remove('active');
-      itversion.style.opacity = '1';
-      enversion.style.opacity = '0.3';
-		});
-
-		enversion.addEventListener('click', function(event) {
-			event.preventDefault();
-			englishText.forEach(function(element) {
-      element.style.display = 'block';
-    });
-      italianText.forEach(function(element) {
-      element.style.display = 'none';
-    });
-			enversion.classList.add('active');
-			itversion.classList.remove('active');
-      enversion.style.opacity = '1';
-      itversion.style.opacity = '0.3';
-		});
-    </script>
 
     
+    <script src="app.js"></script>
+   
   </body>
 </html>
