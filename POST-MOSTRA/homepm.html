@@ -22,28 +22,40 @@
   </head>
 
   <body>
-    <header class="header">
-      <nav class="navbar">
-        <div class="hamburger icon2-container">
-          <img src="./img/hamburger_icon.png" alt="hamburger" />
-        </div>
+    <!-- <header class="header"> -->
+    <nav class="navbar">
+      <div class="hamburger icon2-container">
+        <img src="./assets/hamburger.png" alt="hamburger" />
+      </div>
 
-        <div class="icon2-container">
-          <img id="logo" src="./assets/anthro.png" alt="logo" />
-        </div>
+      <div class="icon2-container">
+        <img id="logo" src="./assets/anthro.png" alt="logo" />
+      </div>
 
-        <div class="icon-container">
-          <ul class="text-container">
-            <li class="nav-item">
-              <a href="" class="nav-link"><p>ABOUT</p></a>
-            </li>
-            <li class="nav-item">
-              <a href="" class="nav-link"><p>EXIBITHION</p></a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
+      <div class="icon-container">
+        <ul class="text-container">
+          <li class="nav-item">
+            <a href="" class="nav-link"><p>ABOUT</p></a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link"><p>EXIBITHION</p></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".text-container");
+
+      hamburger.addEventListener("click", mobileMenu);
+
+      function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      }
+    </script>
+    <!-- </header> -->
 
     <div class="elenco_progetti row">
       <ul class="col-12">

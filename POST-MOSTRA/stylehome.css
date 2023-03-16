@@ -129,29 +129,21 @@ table {
 
 .nav-link {
   text-decoration: none;
-  font-size: 20px;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
 }
 
 .icon-container {
-  padding-right: 20px;
-  padding-top: 0;
   margin-left: auto;
-  min-width: 24px;
   display: flex;
   align-items: center;
   z-index: 2;
 }
 
-.icon-container img {
-  height: 24px;
-}
-
 .icon2-container {
-  padding-right: 20px;
-  padding-top: 10px;
   margin-right: auto;
-  margin-left: 20px;
-  min-width: 24px;
+  padding: 3%;
+  /* min-width: 24px; */
   display: flex;
   align-items: center;
   z-index: 2;
@@ -161,34 +153,20 @@ table {
   height: 24px;
 }
 
-#logo img {
-  padding-top: -20px;
-}
-
 .text-container {
-  margin: 0;
-  padding-right: 16px;
-  padding-top: 10px;
-
-  /* margin-left: 30px; */
-  min-width: 24px;
+  padding: 3%;
   display: flex;
   align-items: center;
   z-index: 2;
   flex-direction: row;
-  text-align: right;
-  /* justify-content: space-between; */
 }
 
 .text-container a,
 .text-container p {
-  font-size: 20px;
-  padding-right: 50px;
-}
-
-.text-container li {
-  margin: 0;
-  padding: 0;
+  padding: 3%;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-right: 20px;
 }
 
 /* menu a tendina */
@@ -199,12 +177,12 @@ table {
 @media only screen and (max-width: 768px) {
   .text-container {
     position: fixed;
-    left: -120%;
-    top: 64px;
+    left: -120%; /* serve per la transizione */
+    top: 64px; /* se diventa 0 arriva in cima alla pagina, ma non so come trasformare l'icona dell'hamburger in una x per chiudere il menu */
     flex-direction: column;
     background-color: #fff;
     width: 100%;
-    text-align: center;
+    height: 100%;
     transition: 0.3s;
   }
 
@@ -212,14 +190,11 @@ table {
     left: 0;
   }
 
-  .icon-container {
-    padding-top: 15px;
-  }
-
   .hamburger {
     display: block;
   }
 
+  /* non so come mettere il logo parte del menu */
   #logo {
     display: none;
   }
@@ -236,6 +211,7 @@ a {
 /* lista in generale */
 .elenco_progetti {
   padding: 3%;
+  padding-top: 6%;
   font-family: "neue-haas-grotesk-text", sans-serif;
   font-size: 3.5rem;
   line-height: 4rem;
