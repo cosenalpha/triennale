@@ -243,6 +243,20 @@ a {
   /* width: 75%; */
 }
 
+.immagine1 {
+  display: block;
+}
+.immagine2 {
+  display: none;
+}
+
+#cambioimmagine:hover .immagine1 {
+  display: none;
+}
+#cambioimmagine:hover .immagine2 {
+  display: block;
+}
+
 /* versione mobile */
 @media only screen and (max-width: 600px) {
   .elenco_progetti {
