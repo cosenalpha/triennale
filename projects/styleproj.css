@@ -214,25 +214,42 @@ a {
 
 .ti-container {
   display: flex;
-  justify-content: space-between;
-  padding-top: 100vh;
 }
-.textleft {
-  text-align: left;
-  padding: 3%;
+.p-text {
   font-size: 1.5rem;
-}
-.imageright {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  max-width: 60vw;
-  padding: 3%;
+  width: 50%;
+  padding: 5vh;
 }
 
-.i-container {
+.p-image {
+  width: 50%;
+  margin-bottom: 3vh;
+}
+
+.p-image img{
+  width: 100%;
+}
+
+
+
+.i-container img{
+  width: 100%;
+}
+
+#inizio{
   height: 100vh;
-  background-color: yellow;
+}
+
+.right {
+  float: right;
+  padding-right: 5vh;
+  padding-left: 5vh;
+}
+
+.left {
+  float: left;
+  padding-right: 5vh;
+  padding-left: 5vh;
 }
 
 /* versione mobile */
