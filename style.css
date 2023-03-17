@@ -224,12 +224,20 @@ table {
   flex-direction: column;
 }
 
+#elenco_orari {
+  padding-top: 2%;
+}
+
 #elenco_orari ul {
   display: flex;
   flex-direction: row;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 #evento {
   padding-left: 8px;
+ 
 }
 
 /* collegamento in generale */
@@ -391,6 +399,12 @@ a {
   #programma {
     font-size: 1.2rem;
     line-height: 1.5rem;
+  }
+
+  #elenco_orari ul {
+    font-size: 1rem;
+    line-height: 1.2rem;
+    padding-right: 100px;
   }
 
   #instagram {
