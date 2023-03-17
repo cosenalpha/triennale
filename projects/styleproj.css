@@ -230,8 +230,6 @@ a {
   width: 100%;
 }
 
-
-
 .i-container img{
   width: 100%;
 }
@@ -254,4 +252,36 @@ a {
 
 /* versione mobile */
 @media only screen and (max-width: 600px) {
+
+  .ti-container {
+    flex-direction: column;
+    margin: 7vw;
+  }
+
+  #concept {
+    flex-direction: column-reverse;
+  }
+
+  .p-text {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .p-image {
+    width: 100%;
+  }
+
+  .i-container img{
+    padding: 5vh;
+  }
+
+  .p-image .left {
+    order: 2;
+  }
+
+  .p-text .right {
+    order: 1;
+  }
 }
+
+
