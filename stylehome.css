@@ -214,6 +214,10 @@ a {
 
 #container-progetti  {position: relative; margin-top: 20vh;}
 
+img {
+  height: 100%
+}
+
 .elenco_progetti {
   padding: 0 3%;
   font-family: "neue-haas-grotesk-text", sans-serif;
@@ -226,37 +230,41 @@ a {
 
 .fill {
   display: block;
+  opacity: 1;
 }
 .border {
-  display: none;
+  display: block;
+  opacity: 0;
 }
 
 .nome-progetto {
   height: 20vh;
   padding: 5vh 0;
   width: 100vw;
+  overflow: hidden;
+  position: relative;
 }
 
-img {
-  height: 100%
+.nome-progetto img {
+  height: 60%;
+  position: absolute; top: 50%; transform: translateY(-50%);
 }
 
-.nome-progetto:hover {
-  background-color: #f9f9f9;
-}
+
 
 .nome-progetto:hover .fill {
-  display: none;
+  opacity: 0;
 }
 .nome-progetto:hover .border {
-  display: block;
+  opacity: 1;
 }
 
 #container-immagine {
   height: 60vh; width: 60vh;
   position: fixed; top: 50vh; right: 1.5%;
   transform: translateY(-50%);
-  z-index: 3; pointer-events: none
+  z-index: 3; pointer-events: none;
+  mix-blend-mode: multiply;
 }
 
 #container-immagine :nth-child(n) {
@@ -264,15 +272,29 @@ img {
   object-fit: cover;
   position: absolute;
   top: 0; left: 0;
-  display: none;
+  opacity: 0;
 }
 
 /* versione mobile */
 @media only screen and (max-width: 600px) {
   .elenco_progetti {
-    padding-top: 10%;
     width: 100%;
-    font-size: 1.2rem;
-    line-height: 1.5rem;
   }
+
+
+.nome-progetto {height: 20vh;}
+
+.nome-progetto img {height: 20%}
+
+#container-immagine {
+  height: 105vw;
+  width: 105vw;
+}
+
+.elenco_progetti{
+  z-index: 4;
+  padding-bottom: 40vh;
+}
+
+
 }
