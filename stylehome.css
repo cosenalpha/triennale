@@ -220,7 +220,7 @@ a {
   font-size: 3.5rem;
   line-height: 4rem;
   font-weight: 600;
-  z-index: 4;
+  z-index: 2;
   position: relative;
 }
 
@@ -232,12 +232,17 @@ a {
 }
 
 .nome-progetto {
-  height: 10vh;
-  margin: 5vh 0;
+  height: 20vh;
+  padding: 5vh 0;
+  width: 100vw;
 }
 
 img {
   height: 100%
+}
+
+.nome-progetto:hover {
+  background-color: #f9f9f9;
 }
 
 .nome-progetto:hover .fill {
@@ -249,9 +254,9 @@ img {
 
 #container-immagine {
   height: 60vh; width: 60vh;
-  position: fixed; top: 50vh; right: 40vh;
+  position: fixed; top: 50vh; right: 1.5%;
   transform: translateY(-50%);
-  z-index: 3;
+  z-index: 3; pointer-events: none
 }
 
 #container-immagine :nth-child(n) {
