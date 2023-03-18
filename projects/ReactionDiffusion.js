@@ -222,6 +222,13 @@
  ];
  
  function draw(){
+
+  let canvasBottom = document.querySelector("canvas").getBoundingClientRect().y 
+
+    //console.log(canvasBottom)
+     
+  
+    if(canvasBottom > - document.querySelector("canvas").getBoundingClientRect().height) {
   //  pixelDensity(2);
  
    background(255, 255, 255);
@@ -253,14 +260,9 @@
   //  image(title, 0, 0, scale*w, scale*w/title.width * title.height);
     image(title, 0, 0, scale*width, scale * width * title.height/title.width);
     
-
- 
-   
     // Set the shader active
     shader(shaderProgram);
 
-    
- 
     // Pass the texture to the shader
     shaderProgram.setUniform('tex0', canvas);
     shaderProgram.setUniform('u_resolution', [width, height]);
@@ -268,6 +270,8 @@
     // Draw a rectangle to fill the whole screen
    noStroke();
    rect(0, 0, width, height);
+
+    }
    
  }
  

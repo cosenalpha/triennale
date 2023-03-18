@@ -51,14 +51,14 @@ function update() {
     }
     else {
       /* progetti[i].querySelector(".fill").style.opacity = 0 */
-      progetti[i].querySelector(".fill").style.opacity = 0.2
+      progetti[i].querySelector(".fill").style.opacity = 0.1
       immagini[i].style.opacity = 0
     }
   }
 
 }
 
-setInterval(update, 50)  
+setInterval(update, 10)  
 
  
 
