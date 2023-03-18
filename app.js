@@ -14,7 +14,6 @@ function mobileMenu() {
   body.classList.toggle("stop");
 }
 
-
 let progetti = Array.from(document.querySelectorAll(".nome-progetto")) 
 let immagini = Array.from(document.querySelectorAll("#container-immagine img"))
 
