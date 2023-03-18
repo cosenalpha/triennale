@@ -1,12 +1,29 @@
-#abstract, #programma, #lingua{
+#abstract, #programma, #lingua, #instagram, #siti_passati {
   font-size: 1.5rem;
 }
 
-#abstract{
+#abstract {
   font-weight: 500;
   padding: 1% 3%;
 }
 
-#lingua{
+#lingua {
   padding: 6% 1% 3% 3%;
+}
+
+#elenco_orari {
+  font-weight: 500;
+  line-height: 2rem;
+}
+
+#siti_passati a {
+  font-weight: 500;
+}
+
+.colp-3 {
+  width: 34.5%;
+}
+
+.colp-1 {
+  width: 13%;
 }

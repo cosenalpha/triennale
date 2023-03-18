@@ -373,11 +373,12 @@ a {
 }
 
 #instagram {
-  padding: 3%;
+  padding: 1.5%;
+  padding-left: 3%;
   font-size: 2.5rem;
   line-height: 2.5rem;
   font-weight: 600;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /* link ai siti passati */
