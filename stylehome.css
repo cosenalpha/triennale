@@ -6,7 +6,8 @@
   vertical-align: baseline;
 }
 
-body {overflow-x: hidden;}
+body {overflow-x: hidden; background-color: white;}
+html {background-color: white;}
 
 /* HTML5 display-role reset for older browsers */
 article,
@@ -134,47 +135,36 @@ img {
   font-size: 3.5rem;
   line-height: 4rem;
   font-weight: 600;
-  z-index: 2;
   position: relative;
-}
-
-.fill {
-  display: block;
-  opacity: 1;
-}
-.border {
-  display: block;
-  opacity: 0;
+  padding-bottom: 40vh;
 }
 
 .nome-progetto {
-  height: 20vh;
+  height: 60vh;
   padding: 5vh 0;
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
   position: relative;
+  display: flex; justify-content: center;
 }
 
-.nome-progetto img {
-  height: 60%;
+.nome-progetto .fill {
+  mix-blend-mode: difference; 
+  z-index: 4;
+  height: 40%;
   position: absolute; top: 50%; transform: translateY(-50%);
 }
 
 
-
-.nome-progetto:hover .fill {
-  opacity: 0;
-}
-.nome-progetto:hover .border {
-  opacity: 1;
+.nome-progetto .co2 {
+  height: calc(1.37 * 40%);
 }
 
 #container-immagine {
-  height: 60vh; width: 60vh;
-  position: fixed; top: 50vh; right: 3%;
-  transform: translateY(-50%);
+  height: 70vh; width: 70vh;
+  position: fixed; top: 50vh; left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 3; pointer-events: none;
-  mix-blend-mode: multiply;
 }
 
 #container-immagine :nth-child(n) {
@@ -182,7 +172,7 @@ img {
   object-fit: cover;
   position: absolute;
   top: 0; left: 0;
-  opacity: 0;
+  opacity: 0; 
 }
 
 /* versione mobile */
@@ -192,18 +182,19 @@ img {
   }
 
 
-.nome-progetto {height: 20vh;}
+.nome-progetto {height: 40vh;}
 
-.nome-progetto img {height: 20%}
+.nome-progetto .fill , .nome-progetto .border {
+  height: 15%;
+}
+
+.nome-progetto .co2 {
+  height: calc(1.37 * 15%)
+}
 
 #container-immagine {
   height: 105vw;
   width: 105vw;
-}
-
-.elenco_progetti{
-  z-index: 4;
-  padding-bottom: 40vh;
 }
 
 
