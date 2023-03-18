@@ -171,7 +171,7 @@ img {
 
 #container-immagine {
   height: 60vh; width: 60vh;
-  position: fixed; top: 50vh; right: 1.5%;
+  position: fixed; top: 50vh; right: 3%;
   transform: translateY(-50%);
   z-index: 3; pointer-events: none;
   mix-blend-mode: multiply;
