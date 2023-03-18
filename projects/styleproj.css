@@ -214,6 +214,7 @@ a {
 
 .ti-container {
   display: flex;
+  margin: 5%;
 }
 .p-text {
   font-size: 1.5rem;
@@ -231,8 +232,13 @@ a {
 }
 
 .i-container img{
-  width: 100%;
+  width: 90%;
 }
+
+/* .i-container {
+  margin-left: 5%;
+  margin-right: 5%;
+} */
 
 #inizio{
   height: 100vh;
@@ -249,6 +255,8 @@ a {
   padding-right: 5vh;
   padding-left: 5vh;
 }
+
+
 
 /* versione mobile */
 @media only screen and (max-width: 600px) {

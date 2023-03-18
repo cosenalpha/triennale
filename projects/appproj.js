@@ -27,7 +27,7 @@ mm.add("(min-width: 600px)", () => {
             scrub: 4,
             toggleActions: "restart none none none",
             pin: "#text1",
-            markers: true,
+            markers: false,
             pinSpacing: false
         }
   });
@@ -43,7 +43,7 @@ mm.add("(min-width: 600px)", () => {
             scrub: 4,
             toggleActions: "restart none none none",
             pin: "#text2",
-            markers: true,
+            markers: false,
             pinSpacing: false
         }
   });
