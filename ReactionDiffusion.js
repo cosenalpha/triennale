@@ -90,6 +90,9 @@ let a = -1; // scorrimento lungo i due array
  
  let shaderProgram;
  let texture2;
+
+ 
+ 
  
  function preload() {
    title = loadImage("assets/anthro.png");
@@ -98,6 +101,8 @@ let a = -1; // scorrimento lungo i due array
  
  function setup() { 
 
+  let loading = document.querySelector("#loading")
+ 
   //pixelDensity(1)
   pixelDensity(1)
    
@@ -155,6 +160,14 @@ let a = -1; // scorrimento lungo i due array
   
    // place initial samples
    initRD();
+
+   loading.style.opacity = 0
+
+   setTimeout(() => {
+    loading.style.display ="none"
+   }, 1000);
+
+   
  }
  
  
@@ -233,79 +246,75 @@ let a = -1; // scorrimento lungo i due array
 
  function draw(){
 
-  let canvasBottom = document.querySelector("canvas").getBoundingClientRect().y 
-
-    //console.log(canvasBottom)
-     
   
-    if(canvasBottom > - document.querySelector("canvas").getBoundingClientRect().height) {
   //  pixelDensity(2);
- let canvasBottom = document.querySelector("canvas").getBoundingClientRect().y
+    let canvasBottom = document.querySelector("canvas").getBoundingClientRect().y
     //console.log(canvasBottom)
     if(canvasBottom > - document.querySelector("canvas").getBoundingClientRect().height) {
-   background(255, 255, 255);
- 
-   if(!fbo) return;
-   // ortho(0, width, -height, 0, 0, 20000);
-   push();
-   ortho();
-   translate(-width/2, -height/2, 0);
-   updateRD();
-   pop();
- 
-   var w = tex.dst.w / SCREEN_SCALE;
-   var h = tex.dst.h / SCREEN_SCALE;
-   
-   // display result
-   shader_display.viewport(0, 0, w, h);
-   shader_display.begin();
-   shader_display.uniformF('PALLETTE', pallette, 7); 
-   shader_display.uniformT('tex', tex.src);
-   shader_display.uniformT('title', texture);
-   shader_display.uniformF('wh_rcp', [1.0/w, 1.0/h]);
-   shader_display.quad();
-   shader_display.end();
-  
-   let scale = 0.8;
- 
-   imageMode(CENTER);
-  //  image(title, 0, 0, scale*w, scale*w/title.width * title.height);
-    image(title, 0, 0, scale*width, scale * width * title.height/title.width);
-  
- 
-   // Timer per cambiare feed/kill ogni 3 secondi
-   if (millis() > nextChange) {
-    nextChange = millis() + timer;
-    // console.log(`time elapsed: ${round(millis() / 1000)}`);
 
-    if ( a < feedArr.length - 1 ) { 
-      a++;
-    } else if ( a == feedArr.length-1 ) {
-      a = 0;
-    }
+            background(255, 255, 255);
+          
+            if(!fbo) return;
+            // ortho(0, width, -height, 0, 0, 20000);
+            push();
+            ortho();
+            translate(-width/2, -height/2, 0);
+            updateRD();
+            pop();
+          
+            var w = tex.dst.w / SCREEN_SCALE;
+            var h = tex.dst.h / SCREEN_SCALE;
+            
+            // display result
+            shader_display.viewport(0, 0, w, h);
+            shader_display.begin();
+            shader_display.uniformF('PALLETTE', pallette, 7); 
+            shader_display.uniformT('tex', tex.src);
+            shader_display.uniformT('title', texture);
+            shader_display.uniformF('wh_rcp', [1.0/w, 1.0/h]);
+            shader_display.quad();
+            shader_display.end();
+            
+            let scale = 0.8;
+          
+            imageMode(CENTER);
+            //  image(title, 0, 0, scale*w, scale*w/title.width * title.height);
+              image(title, 0, 0, scale*width, scale * width * title.height/title.width);
+            
+          
+            // Timer per cambiare feed/kill ogni 3 secondi
+            if (millis() > nextChange) {
+              nextChange = millis() + timer;
+              // console.log(`time elapsed: ${round(millis() / 1000)}`);
 
-    rdDef.feed = feedArr[a];
-    rdDef.kill = killArr[a];
-      
-    // console.log("a: " + a+ ", feed: " + rdDef.feed + ", kill: " + rdDef.kill)
+              if ( a < feedArr.length - 1 ) { 
+                a++;
+              } else if ( a == feedArr.length-1 ) {
+                a = 0;
+              }
 
-  }
+              rdDef.feed = feedArr[a];
+              rdDef.kill = killArr[a];
+                
+              console.log("a: " + a+ ", feed: " + rdDef.feed + ", kill: " + rdDef.kill)
 
-      
-    // Set the shader active
-    shader(shaderProgram);
+            }
 
-    
- 
-    // Pass the texture to the shader
-    shaderProgram.setUniform('tex0', canvas);
-    shaderProgram.setUniform('u_resolution', [width, height]);
-  
-    // Draw a rectangle to fill the whole screen
-   noStroke();
-   rect(0, 0, width, height);
+                
+              // Set the shader active
+              shader(shaderProgram);
+
+              
+          
+              // Pass the texture to the shader
+              shaderProgram.setUniform('tex0', canvas);
+              shaderProgram.setUniform('u_resolution', [width, height]);
+            
+              // Draw a rectangle to fill the whole screen
+            noStroke();
+            rect(0, 0, width, height);
    }
- }
+ 
 }
  
  

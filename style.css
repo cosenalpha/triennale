@@ -291,6 +291,9 @@ a {
   display: none;
 }
 
+#loading {position: fixed; width: 100%; height: 100%; overflow: hidden; background-color: white; z-index: 10;
+transition: 0.8s; pointer-events: none;}
+
 /* data,luogo, scaletta e orario della mostra */
 /* comprende tutte le info */
 .info {
