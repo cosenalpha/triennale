@@ -7,11 +7,12 @@
 }
 
 .p-text {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   width: 47%;
   position: sticky;
   top: 15%;
   height: fit-content;
+  font-family: "neue-haas-grotesk-text", sans-serif;
 }
 
 .p-image {
@@ -47,6 +48,21 @@
   /* margin-right: 5%; */
 }
 
+.arr-container{
+display: flex;
+justify-content: space-between;
+margin: 3%
+}
+
+#previous, #next{
+  height: 10vh;
+  justify-content: flex-start;
+}
+
+#previous img, #next img {
+  height: 100%;
+  justify-content: flex-start;
+}
 
 
 /* versione mobile */
