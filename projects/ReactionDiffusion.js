@@ -53,6 +53,15 @@
 
  var gl;
  var def;
+
+// timer per il cambio di feed e kill
+ let timer = 4500;
+ let nextChange = timer; //syncs the timer and change rate
+
+// array che contengono i diversi valori di feed e kill che l'effetto assume
+let feedArr = [0.04784, 0.02430, 0.04100, 0.01813, 0.02430];
+let killArr = [0.05947, 0.05174, 0.05852, 0.04651, 0.05174];
+let a = -1; // scorrimento lungo i due array
  
  // offscreen resolution scale factor.
  var SCREEN_SCALE = 1.0 / devicePixelRatio;
@@ -61,7 +70,7 @@
  var rdDef = {
    name    : 'ReactionDiffusion',
    da      : 1.0,
-   db      : 0.5,
+   db      : 0.6,
    feed    : feed2,
    kill    : 0.06,
    dt      : 1.0,
@@ -81,6 +90,9 @@
  
  let shaderProgram;
  let texture2;
+
+ 
+ 
  
  function preload() {
    title = loadImage("../assets/anthro.png");
@@ -89,6 +101,8 @@
  
  function setup() { 
 
+  let loading = document.querySelector("#loading")
+ 
   //pixelDensity(1)
   pixelDensity(1)
    
@@ -146,6 +160,14 @@
   
    // place initial samples
    initRD();
+
+   loading.style.opacity = 0
+
+   setTimeout(() => {
+    loading.style.display ="none"
+   }, 1000);
+
+   
  }
  
  
@@ -221,59 +243,79 @@
    1.00, 1.00, 1.00
  ];
  
+
  function draw(){
 
-  let canvasBottom = document.querySelector("canvas").getBoundingClientRect().y 
-
-    //console.log(canvasBottom)
-     
   
-    if(canvasBottom > - document.querySelector("canvas").getBoundingClientRect().height) {
   //  pixelDensity(2);
- 
-   background(255, 255, 255);
- 
-   if(!fbo) return;
-   // ortho(0, width, -height, 0, 0, 20000);
-   push();
-   ortho();
-   translate(-width/2, -height/2, 0);
-   updateRD();
-   pop();
- 
-   var w = tex.dst.w / SCREEN_SCALE;
-   var h = tex.dst.h / SCREEN_SCALE;
-   
-   // display result
-   shader_display.viewport(0, 0, w, h);
-   shader_display.begin();
-   shader_display.uniformF('PALLETTE', pallette, 7); 
-   shader_display.uniformT('tex', tex.src);
-   shader_display.uniformT('title', texture);
-   shader_display.uniformF('wh_rcp', [1.0/w, 1.0/h]);
-   shader_display.quad();
-   shader_display.end();
-  
-   let scale = 0.8;
- 
-   imageMode(CENTER);
-  //  image(title, 0, 0, scale*w, scale*w/title.width * title.height);
-    image(title, 0, 0, scale*width, scale * width * title.height/title.width);
-    
-    // Set the shader active
-    shader(shaderProgram);
+    let canvasBottom = document.querySelector("canvas").getBoundingClientRect().y
+    //console.log(canvasBottom)
+    if(canvasBottom > - document.querySelector("canvas").getBoundingClientRect().height) {
 
-    // Pass the texture to the shader
-    shaderProgram.setUniform('tex0', canvas);
-    shaderProgram.setUniform('u_resolution', [width, height]);
-  
-    // Draw a rectangle to fill the whole screen
-   noStroke();
-   rect(0, 0, width, height);
+            background(255, 255, 255);
+          
+            if(!fbo) return;
+            // ortho(0, width, -height, 0, 0, 20000);
+            push();
+            ortho();
+            translate(-width/2, -height/2, 0);
+            updateRD();
+            pop();
+          
+            var w = tex.dst.w / SCREEN_SCALE;
+            var h = tex.dst.h / SCREEN_SCALE;
+            
+            // display result
+            shader_display.viewport(0, 0, w, h);
+            shader_display.begin();
+            shader_display.uniformF('PALLETTE', pallette, 7); 
+            shader_display.uniformT('tex', tex.src);
+            shader_display.uniformT('title', texture);
+            shader_display.uniformF('wh_rcp', [1.0/w, 1.0/h]);
+            shader_display.quad();
+            shader_display.end();
+            
+            let scale = 0.8;
+          
+            imageMode(CENTER);
+            //  image(title, 0, 0, scale*w, scale*w/title.width * title.height);
+              image(title, 0, 0, scale*width, scale * width * title.height/title.width);
+            
+          
+            // Timer per cambiare feed/kill ogni 3 secondi
+            if (millis() > nextChange) {
+              nextChange = millis() + timer;
+              // console.log(`time elapsed: ${round(millis() / 1000)}`);
 
-    }
-   
- }
+              if ( a < feedArr.length - 1 ) { 
+                a++;
+              } else if ( a == feedArr.length-1 ) {
+                a = 0;
+              }
+
+              rdDef.feed = feedArr[a];
+              rdDef.kill = killArr[a];
+                
+              console.log("a: " + a+ ", feed: " + rdDef.feed + ", kill: " + rdDef.kill)
+
+            }
+
+                
+              // Set the shader active
+              shader(shaderProgram);
+
+              
+          
+              // Pass the texture to the shader
+              shaderProgram.setUniform('tex0', canvas);
+              shaderProgram.setUniform('u_resolution', [width, height]);
+            
+              // Draw a rectangle to fill the whole screen
+            noStroke();
+            rect(0, 0, width, height);
+   }
+ 
+}
  
  
  function initRD(){
@@ -299,11 +341,12 @@
    // < native p5 here
    noStroke();
    fill(0,255,0);
-   ellipse(-100, 0, 5, 5);
-   ellipse(+100, 0, 5, 5);
+   ellipse(-445, -45, 15, 10);
+   ellipse(+168, 38, 20, 13);
    ellipse(0, -100, 5, 5);
-   ellipse(0, +100, 5, 5);
- 
+   ellipse(680, -89, 10, 23);
+   ellipse(-140, 70, 7, 51);
+
    // >
    tex.swap();
    fbo.end();
@@ -343,13 +386,13 @@
      shader_grayscott.quad();
      shader_grayscott.end();
      // < native p5 here
-     if(mouseIsPressed){
+    //  if(mouseIsPressed){
        resetShader();
        noStroke();
        fill(0,255,0);
        ellipse(mouseX, mouseY, 25, 25);
        shader(shaderProgram);
-     }
+    // }
      // >
      
      // ping-pong
