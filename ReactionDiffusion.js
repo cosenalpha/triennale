@@ -55,11 +55,11 @@
  var def;
 
 // timer per il cambio di feed e kill
- let timer = 4500;
+ let timer = 6000;
  let nextChange = timer; //syncs the timer and change rate
 
 // array che contengono i diversi valori di feed e kill che l'effetto assume
-let feedArr = [0.04784, 0.02430, 0.04100, 0.01813, 0.02430];
+let feedArr = [0.04784, 0.02130, 0.04100, 0.01813, 0.02430];
 let killArr = [0.05947, 0.05174, 0.05852, 0.04651, 0.05174];
 let a = -1; // scorrimento lungo i due array
  
@@ -70,7 +70,7 @@ let a = -1; // scorrimento lungo i due array
  var rdDef = {
    name    : 'ReactionDiffusion',
    da      : 1.0,
-   db      : 0.6,
+   db      : 0.56,
    feed    : feed2,
    kill    : 0.06,
    dt      : 1.0,
@@ -287,7 +287,7 @@ let a = -1; // scorrimento lungo i due array
     rdDef.feed = feedArr[a];
     rdDef.kill = killArr[a];
       
-    console.log("a: " + a+ ", feed: " + rdDef.feed + ", kill: " + rdDef.kill)
+    // console.log("a: " + a+ ", feed: " + rdDef.feed + ", kill: " + rdDef.kill)
 
   }
 
