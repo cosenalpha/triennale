@@ -222,7 +222,15 @@
  ];
  
  function draw(){
+
+  let canvasBottom = document.querySelector("canvas").getBoundingClientRect().y 
+
+    //console.log(canvasBottom)
+     
+  
+    if(canvasBottom > - document.querySelector("canvas").getBoundingClientRect().height) {
   //  pixelDensity(2);
+ 
  
    background(255, 255, 255);
  
@@ -268,6 +276,8 @@
     // Draw a rectangle to fill the whole screen
    noStroke();
    rect(0, 0, width, height);
+
+    }
    
  }
  
