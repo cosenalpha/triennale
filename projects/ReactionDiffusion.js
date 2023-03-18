@@ -91,11 +91,23 @@ let a = -1; // scorrimento lungo i due array
  let shaderProgram;
  let texture2;
 
+ let url = document.URL
+ let pagineProgetto = ["ICE", "FLOGISTO", "BCTR", "EXHOIL", "WWW", "DUARA", "ILLUMIA", "LITIA", "CARBOXIDE", "MOLLUSTIC", "MOONDO"]
+ let elementi = ["ice", "fire", "bacteria", "soil", "fungus", "algae", "sun", "rocks", "co2", "molluscs", "moon"]
+ let imgUrl, imgUrlString;
  
+ for(let i = 0; i < pagineProgetto.length; i++) {
+  let progettoTrovato = url.search(pagineProgetto[i])
+  if(progettoTrovato != -1) {
+    imgUrl =  "../assets/projects/nomi/png/" + elementi[i] + ".png"
+    console.log(imgUrl)
+  }
+ }
+
  
  
  function preload() {
-   title = loadImage("../assets/anthro.png");
+  title = loadImage(imgUrl);
    shaderProgram = loadShader("../shader/edgeDetection.vert", "../shader/edgeDetection.frag");
  }
  
@@ -275,11 +287,11 @@ let a = -1; // scorrimento lungo i due array
             shader_display.quad();
             shader_display.end();
             
-            let scale = 0.8;
+            let scale = 0.2;
           
             imageMode(CENTER);
-            //  image(title, 0, 0, scale*w, scale*w/title.width * title.height);
-              image(title, 0, 0, scale*width, scale * width * title.height/title.width);
+
+              image(title, 0, 0, scale * height * title.width / title.height, scale * height );
             
           
             // Timer per cambiare feed/kill ogni 3 secondi
