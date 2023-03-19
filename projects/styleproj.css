@@ -2,7 +2,7 @@
 
 .ti-container {
   display: flex;
-  margin: 3%;
+  margin: 3% 12%;
   justify-content: space-between;
 }
 
@@ -10,7 +10,7 @@
   font-size: 1.3rem;
   width: 47%;
   position: sticky;
-  top: 15%;
+  top: 8%;
   height: fit-content;
   font-family: "neue-haas-grotesk-text", sans-serif;
 }
@@ -28,8 +28,9 @@
 }
 
 .i-container {
-  width: 100%;
-  padding: 0 3%;
+  width: 76%;
+  margin: 3% 12%;
+  padding: 3% 0;
 }
 
 #inizio{
@@ -51,26 +52,25 @@
 .arr-container{
 display: flex;
 justify-content: space-between;
-margin: 3%
+margin: 2% 12%;
 }
 
 #previous, #next{
-  height: 10vh;
-  justify-content: flex-start;
+height: 20vh;
 }
 
-#previous img, #next img {
-  height: 100%;
-  justify-content: flex-start;
-}
 
 
 /* versione mobile */
 @media only screen and (max-width: 600px) {
 
+  #canvas {
+    overflow-x: hidden;
+  }
+
   .ti-container {
     flex-direction: column;
-    margin: 7vw;
+    margin: 0 7vw;
   }
 
   #concept {
@@ -78,25 +78,40 @@ margin: 3%
   }
 
   .p-text {
+    position: relative;
     width: 100%;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    margin: 3vh 0;
   }
 
   .p-image {
     width: 100%;
   }
 
-  .i-container img{
-    padding: 5vh;
+  .i-container{
+    padding: 0;
+    margin: 0 7vw;
+    width: 86vw;
   }
 
-  .p-image .left {
-    order: 2;
+  .arr-container{
+    display: flex;
+    flex-direction: column;
+    margin: 3vh 7vw;
+    }
+
+  
+  #previous, #next{
+    height: 7vh;
+    text-align: center;
   }
 
-  .p-text .right {
-    order: 1;
+  #previous img, #next img{
+    height: 7vh;
+    padding-bottom: 2%;
   }
+
+
 }
 
 
