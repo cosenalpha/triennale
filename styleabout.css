@@ -32,3 +32,16 @@
 .colp-1 {
   width: 13%;
 }
+
+@media only screen and (max-width: 600px) {
+
+  #abstract,
+  #programma,
+  #lingua,
+  #instagram,
+  #siti_passati {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+  }
+
+}

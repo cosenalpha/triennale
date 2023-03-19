@@ -21,22 +21,29 @@
 
       <div class="icon-container">
         <ul class="text-container">
+          <img src="./assets/cross.svg" alt="close" id="cross"/>
           <li class="nav-item">
             <a href="../about.html" class="nav-link"><p>About</p></a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link"><p>Exhibition</p></a>
           </li>
+          <li class="nav-item">
+            <a href="#" id="itversion" class="active">IT&#160</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" id="enversion">/ EN</a>
+          </li>
         </ul>
       </div>
     </nav>
     
 
-    <div class="row">
-      <div class="col-12 lingua" id="lingua">
+    <div class="row" style="height: 10vh;">
+      <!-- <div class="col-12 lingua" id="lingua">
         <div><a href="#" id="itversion" class="active">IT&#160</a></div>
         <div><a href="#" id="enversion">/ EN</a></div>
-      </div>
+      </div> -->
     </div>
 
     <div class="row it">
@@ -379,6 +386,7 @@
 
 
     <!-- codice aprire sezioni tramite bottoni (nella versione mobile)-->
+    <script src="app.js"></script>
     <script>
       const creditsContainer = document.getElementById("creditsContainer");
       const logos = document.getElementById("partnersContainer");
@@ -397,38 +405,6 @@
         }
       }
 
-    const itversion = document.getElementById('itversion');
-		const enversion = document.getElementById('enversion');
-		const italianText = document.querySelectorAll('.it');
-		const englishText = document.querySelectorAll('.en');
-
-		itversion.addEventListener('click', function(event) {
-			event.preventDefault();
-			italianText.forEach(function(element) {
-      element.style.display = 'block';
-    });
-      englishText.forEach(function(element) {
-      element.style.display = 'none';
-    });
-			itversion.classList.add('active');
-			enversion.classList.remove('active');
-      itversion.style.opacity = '1';
-      enversion.style.opacity = '0.3';
-		});
-
-		enversion.addEventListener('click', function(event) {
-			event.preventDefault();
-			englishText.forEach(function(element) {
-      element.style.display = 'block';
-    });
-      italianText.forEach(function(element) {
-      element.style.display = 'none';
-    });
-			enversion.classList.add('active');
-			itversion.classList.remove('active');
-      enversion.style.opacity = '1';
-      itversion.style.opacity = '0.3';
-		});
     </script>
 
     

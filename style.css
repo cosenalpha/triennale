@@ -332,15 +332,13 @@ display: flex; justify-content: center; align-items: center}
 }
 
 /* bottone per il cambio lingua */
-#lingua {
+/* #lingua {
   display: flex;
   clear: both;
   padding: 3%;
   font-size: 2.2rem;
   font-weight: 600;
-  /* text-align: right; */
-  /* align-self: top; */
-}
+} */
 
 /* peso lingua */
 #itversion {
@@ -348,6 +346,7 @@ display: flex; justify-content: center; align-items: center}
 }
 #enversion {
   opacity: 30%;
+  padding-left: 0;
 }
 
 /* abstract in generale */
@@ -529,9 +528,9 @@ a {
     line-height: 1.6rem;
   }
 
-  #lingua {
+  /* #lingua {
     font-size: 1.2rem;
-  }
+  } */
 
   #abstract {
     padding-top: 10%;
