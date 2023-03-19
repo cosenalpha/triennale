@@ -48,20 +48,18 @@
 
       <div class="icon-container">
         <ul class="text-container">
-
-          <img src="../assets/cross.svg" alt="close" id="cross"/>
-
+          <img src="./assets/cross.svg" alt="close" id="cross"/>
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link" id="home"><p>Home</p></a>
+          </li>
           <li class="nav-item">
             <a href="../about.html" class="nav-link"><p>About</p></a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link"><p>Exhibition</p></a>
           </li>
-          <li class="nav-item">
-            <a href="#" id="itversion" class="active">IT&#160</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" id="enversion">/ EN</a>
+          <li class="nav-item" id="switch">
+            <a href="#" id="itversion" class="active">IT&#160</a><a href="#" id="enversion">/ EN</a>
           </li>
         </ul>
       </div>
@@ -89,8 +87,8 @@
 		  <div class="p-text left" id="text1">
 			<p class="it">Le alghe sono esseri millenari che abitano il pianeta da più di tre miliardi di anni, 
         garantendo la vita su di esso grazie al fenomeno della fotosintesi clorofilliana. 
-        Tramite la fotosintesi, le alghe producono più della metà dell’ossigeno che respiriamo, 
-        vivendo in perfetto equilibrio con l’ambiente che le circonda.
+        Tramite la fotosintesi, le alghe producono più della metà dell&apos;ossigeno che respiriamo, 
+        vivendo in perfetto equilibrio con l&apos;ambiente che le circonda.
       </p>
       <p class="en">
         Algae are millenary beings that have inhabited our
@@ -117,12 +115,12 @@
 			<img src="../assets/projects/algae/algae_06.png" alt="Image 6">
 		</div>
 		<div class="p-text right" id="text2">
-			<p class="it">Questo fenomeno porta l’umanità a creare un culto fondato sull’anima primordiale della dea alga, 
+			<p class="it">Questo fenomeno porta l&apos;umanità a creare un culto fondato sull&apos;anima primordiale della dea alga, 
         che prende il nome di Duara. Con il passare del tempo,
         la comunità di Duara cresce per adesione spontanea e appassionata, 
         portando il culto a trasformarsi in una religione strutturata e diffusa su scala globale. 
         Duara dona la vita e indica il ritmo armonioso. Il fulcro della connessione con la divinità 
-        si raggiunge tramite il sacro totem, che permette ai fedeli di respirare all’unisono con il ritmo dell’alga madre.
+        si raggiunge tramite il sacro totem, che permette ai fedeli di respirare all&apos;unisono con il ritmo dell&apos;alga madre.
       </p>
       <p class="en">
         This phenomenon led mankind to create a cult
@@ -183,9 +181,24 @@
     </div>
 
     <div class="arr-container">
-      <div id="previous"> <a href="#"><img src="../assets/projects/nomi/stroke/ALGAE_t.svg" alt="prev"></a></div>
-      <div id="next"><a href="#"><img src="../assets/projects/nomi/stroke/BACTERIA_t.svg" alt="next"></a></div>
-    
+      <div id="prev">
+        <a class="prev" href="./05_WWW.html"
+          >&lt;&ensp;Previous project
+      </a>
+      </div>
+      <div id="next">
+        <a class="next" href="./07_ILLUMIA.html"
+          >Next project&ensp;&gt;
+      </a>
+      </div>
+    </div>
+
+      <footer> 
+        <p>
+          Politecnico di Milano / Degree Course in Communication Design / C1 Final Synthesis Studio / A.Y. 2022/2023
+        </p>
+      </footer>
+
     <script src="../app.js"></script>
     <script src="ReactionDiffusion.js" type="text/javascript"></script>
     <script src="../ShaderRD.js" type="text/javascript"></script>

@@ -209,6 +209,13 @@ table {
   display: none;
 }
 
+<<<<<<< Updated upstream
+=======
+#home{
+  display: none;
+}
+
+>>>>>>> Stashed changes
 @media only screen and (max-width: 768px) {
   .text-container {
     position: fixed;
@@ -382,6 +389,10 @@ a {
   font-size: 2.2rem;
   font-weight: 600;
 } */
+
+#switch{
+  display: flex;
+}
 
 /* peso lingua */
 #itversion {
@@ -560,6 +571,10 @@ a {
   .info {
     font-size: 1.3rem;
     line-height: 1.6rem;
+  }
+
+  #home{
+    display: block;
   }
 
   #abstract {

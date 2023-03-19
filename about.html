@@ -23,23 +23,23 @@
         <ul class="text-container">
           <img src="./assets/cross.svg" alt="close" id="cross"/>
           <li class="nav-item">
+            <a href="../index.html" class="nav-link" id="home"><p>Home</p></a>
+          </li>
+          <li class="nav-item">
             <a href="../about.html" class="nav-link"><p>About</p></a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link"><p>Exhibition</p></a>
           </li>
-          <li class="nav-item">
-            <a href="#" id="itversion" class="active">IT&#160</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" id="enversion">/ EN</a>
+          <li class="nav-item" id="switch">
+            <a href="#" id="itversion" class="active">IT&#160</a><a href="#" id="enversion">/ EN</a>
           </li>
         </ul>
       </div>
     </nav>
     
 
-    <div class="row" style="height: 10vh;">
+    <div class="row" style="height: 15vh;">
       <!-- <div class="col-12 lingua" id="lingua">
         <div><a href="#" id="itversion" class="active">IT&#160</a></div>
         <div><a href="#" id="enversion">/ EN</a></div>
@@ -384,12 +384,18 @@
         </div>
       </div>
 
+      <footer> 
+        <p>
+          Politecnico di Milano / Degree Course in Communication Design / C1 Final Synthesis Studio / A.Y. 2022/2023
+        </p>
+      </footer>
 
     <!-- codice aprire sezioni tramite bottoni (nella versione mobile)-->
     <script src="app.js"></script>
     <script>
       const creditsContainer = document.getElementById("creditsContainer");
       const logos = document.getElementById("partnersContainer");
+      creditsContainer.style.display = "none";
 
       function openCredit() {
         if (creditsContainer.style.display == "none") {
