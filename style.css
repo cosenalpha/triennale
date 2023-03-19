@@ -4,6 +4,11 @@
   padding: 0;
   border: 0;
   vertical-align: baseline;
+  cursor: default;
+}
+
+a {
+  cursor: pointer;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -21,7 +26,9 @@ section {
   display: block;
 }
 
-html {scrollbar-width: none;}
+html {
+  scrollbar-width: none;
+}
 
 body:-webkit-scrollbar {
   display: none;
@@ -29,21 +36,20 @@ body:-webkit-scrollbar {
   overflow: scroll;
 }
 
-body.stop {overflow: hidden;}
-
+body.stop {
+  overflow: hidden;
+}
 
 ::-webkit-scrollbar {
   width: 0px;
   background: transparent; /* make scrollbar transparent */
-  }
-
+}
 
 /* Hide scrollbar for IE, Edge and Firefox */
 body {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-    overscroll-behavior: contain;
-
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  overscroll-behavior: contain;
 }
 
 ol,
@@ -203,9 +209,7 @@ table {
   display: none;
 }
 
-
 @media only screen and (max-width: 768px) {
-  
   .text-container {
     position: fixed;
     left: 0;
@@ -214,12 +218,17 @@ table {
     width: 100%;
     height: 100%;
     /* transition: 1s; */
-    padding: 20vh 0; margin: 0;
-    flex-direction: column; align-items: center; justify-content: space-around;
+    padding: 20vh 0;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     overflow: hidden;
   }
 
-  .text-container :nth-child(n) {padding: 0;}
+  .text-container :nth-child(n) {
+    padding: 0;
+  }
 
   .text-container.active {
     top: 0;
@@ -227,16 +236,30 @@ table {
 
   .hamburger {
     display: block;
-    height: 5vh; width: 5vh; 
-    display: flex; align-items: center;
-    position: absolute; left: 50%; transform: translateX(-50%);
+    height: 5vh;
+    width: 5vh;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
-  #cross {display: block; width: 6vh; height: 6vh; position: absolute; top: 3%;}
+  #cross {
+    display: block;
+    width: 6vh;
+    height: 6vh;
+    position: absolute;
+    top: 3%;
+  }
 
-  .hamburger img { width: 100%;}
+  .hamburger img {
+    width: 100%;
+  }
 
-  .nav-link p {font-size: 2rem;}
+  .nav-link p {
+    font-size: 2rem;
+  }
 
   /* non so come mettere il logo parte del menu */
   #logo {
@@ -251,13 +274,11 @@ a {
   text-decoration: none;
 }
 
-
-
 /* sottotitolo della mostra */
 #subtitle {
   z-index: 3;
   top: 75vh;
-  width:100%;
+  width: 100%;
   position: absolute;
   font-size: 3.5rem;
   line-height: 3.5rem;
@@ -266,10 +287,19 @@ a {
   align-items: center;
 }
 
-
-#loading {position: fixed; width: 100%; height: 100%; overflow: hidden; background-color: white; z-index: 10;
-transition: 0.8s; pointer-events: none;
-display: flex; justify-content: center; align-items: center}
+#loading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: white;
+  z-index: 10;
+  transition: 0.8s;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 #loading h2 {
   font-size: 2rem;
@@ -279,28 +309,51 @@ display: flex; justify-content: center; align-items: center}
   animation: loadingAnimation 2s 1s infinite;
 }
 
-.circle {border: 1px solid black; position: absolute; height: 5vh; width: 5vh; border-radius: 5vh; opacity: 0;}
+.circle {
+  border: 1px solid black;
+  position: absolute;
+  height: 5vh;
+  width: 5vh;
+  border-radius: 5vh;
+  opacity: 0;
+}
 
-#inner-circle { animation: loadingInner 4s 1s infinite;}
-#outer-circle { animation: loadingOuter 4s 1s infinite;}
+#inner-circle {
+  animation: loadingInner 4s 1s infinite;
+}
+#outer-circle {
+  animation: loadingOuter 4s 1s infinite;
+}
 
 @keyframes loadingInner {
-
-  0% {scale: 1; opacity: 1}
-  16.66% {scale: 1.3;}
-  50% {scale: 1.3;}
-  66.66% {scale: 1.3}
-  100% {scale: 1;}
-   
+  0% {
+    scale: 1;
+    opacity: 1;
+  }
+  16.66% {
+    scale: 1.3;
+  }
+  50% {
+    scale: 1.3;
+  }
+  66.66% {
+    scale: 1.3;
+  }
+  100% {
+    scale: 1;
+  }
 }
 @keyframes loadingOuter {
-
-  0% {scale: 1;}
-  50% {scale: 2;}
-  100% {scale: 1;}
-   
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 2;
+  }
+  100% {
+    scale: 1;
+  }
 }
-
 
 /* data,luogo, scaletta e orario della mostra */
 /* comprende tutte le info */
@@ -494,7 +547,6 @@ a {
 
 /* versione mobile */
 @media only screen and (max-width: 600px) {
-
   html::-webkit-scrollbar {
     -webkit-appearance: none;
   }
@@ -583,8 +635,14 @@ a {
     width: 100%;
     height: 100%;
   }
-
 }
 
-footer {width: 100%; padding: 3vh 3%; position: absolute;}
-footer p {text-align: center; width: 100%;}
+footer {
+  width: 100%;
+  padding: 3vh 3%;
+  position: absolute;
+}
+footer p {
+  text-align: center;
+  width: 100%;
+}
