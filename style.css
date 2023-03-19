@@ -406,6 +406,11 @@ a {
   text-decoration: none;
 }
 
+#projCredits {
+  width: 100%;
+  text-align: center;
+}
+
 /* crediti */
 .openSection {
   padding: 3%;
