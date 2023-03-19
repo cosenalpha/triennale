@@ -104,6 +104,18 @@ let a = -1; // scorrimento lungo i due array
   }
  }
 
+
+ var x = window.matchMedia("(max-width: 700px)")
+ x.addEventListener("change", scalemobile) // Attach listener function on state changes
+ function scalemobile(x) {
+  if (x.matches) { // If media query matches
+    feed2 = 0.01
+  } else {
+    feed2 = 0.04
+  }
+}
+
+
  
  
  function preload() {
@@ -273,6 +285,10 @@ let a = -1; // scorrimento lungo i due array
             translate(-width/2, -height/2, 0);
             updateRD();
             pop();
+
+            scalemobile(x); // Call listener function at run time
+
+            console.log(feed2);
           
             var w = tex.dst.w / SCREEN_SCALE;
             var h = tex.dst.h / SCREEN_SCALE;
