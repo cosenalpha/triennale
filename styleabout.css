@@ -1,9 +1,14 @@
-#abstract, #programma, #lingua, #instagram, #siti_passati {
+#abstract,
+#programma,
+#lingua,
+#instagram,
+#siti_passati {
   font-size: 1.5rem;
 }
 
 #abstract {
   font-weight: 500;
+  line-height: 2rem;
   padding: 1% 3%;
 }
 
