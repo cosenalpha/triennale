@@ -71,12 +71,12 @@
   display: none;
 } */
 
-a.prev,
+/* a.prev,
 a.next {
   position: relative;
-}
+} */
 
-a.prev img,
+/* a.prev img,
 a.next img {
   position: absolute;
   display: block;
@@ -85,15 +85,15 @@ a.next img {
   height: 150px;
   align-self: center;
   left: 0;
-  /* top: -20px; */
-  /* transition: opacity 0.5s, top 0.5s; */
-}
+  top: -20px;
+  transition: opacity 0.5s, top 0.5s;
+} */
 
-a.prev:hover img,
+/* a.prev:hover img,
 a.next:hover img {
   opacity: 1;
-  /* top: 20px; */
-}
+  top: 20px;
+} */
 
 /* versione mobile */
 @media only screen and (max-width: 600px) {
