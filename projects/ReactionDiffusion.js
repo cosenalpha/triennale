@@ -104,14 +104,15 @@ let a = -1; // scorrimento lungo i due array
   }
  }
 
+ let scale = 0.2;
 
  var x = window.matchMedia("(max-width: 700px)")
  x.addEventListener("change", scalemobile) // Attach listener function on state changes
  function scalemobile(x) {
   if (x.matches) { // If media query matches
-    feed2 = 0.01
+    scale = 0.065;
   } else {
-    feed2 = 0.04
+    scale = 0.2;
   }
 }
 
@@ -288,7 +289,7 @@ let a = -1; // scorrimento lungo i due array
 
             scalemobile(x); // Call listener function at run time
 
-            console.log(feed2);
+            console.log(scale);
           
             var w = tex.dst.w / SCREEN_SCALE;
             var h = tex.dst.h / SCREEN_SCALE;
@@ -303,7 +304,6 @@ let a = -1; // scorrimento lungo i due array
             shader_display.quad();
             shader_display.end();
             
-            let scale = 0.2;
           
             imageMode(CENTER);
 
