@@ -209,13 +209,10 @@ table {
   display: none;
 }
 
-<<<<<<< Updated upstream
-=======
 #home{
   display: none;
 }
 
->>>>>>> Stashed changes
 @media only screen and (max-width: 768px) {
   .text-container {
     position: fixed;
