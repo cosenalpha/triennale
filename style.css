@@ -458,7 +458,7 @@ a {
 }
 
 #siti_passati a {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 #titolo_passato {
@@ -592,6 +592,7 @@ a {
   #siti_passati {
     font-size: 1.2rem;
     line-height: 1.5rem;
+    
   }
 
   #siti_passati p {
