@@ -129,7 +129,6 @@ a.next:hover img {
 
   .arr-container {
     display: flex;
-    flex-direction: column;
     margin: 3vh 7vw;
   }
 
