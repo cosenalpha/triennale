@@ -193,9 +193,13 @@ table {
 }
 
 .text-container a,
-.text-container p,
-.icon2-container p {
+.text-container p{
   padding-left: 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.icon2-container p {
   font-size: 1.5rem;
   font-weight: 600;
 }
