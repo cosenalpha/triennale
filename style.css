@@ -650,10 +650,11 @@ a {
 
 footer {
   width: 100%;
-  padding: 3vh 3%;
+  padding: 3vh 7vw;
   position: absolute;
 }
 footer p {
   text-align: center;
   width: 100%;
+  font-size: 1rem;
 }
