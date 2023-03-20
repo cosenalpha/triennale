@@ -55,7 +55,7 @@
  var def;
 
 // timer per il cambio di feed e kill
- let timer = 6000;
+ let timer = 6500;
  let nextChange = timer; //syncs the timer and change rate
 
 // array che contengono i diversi valori di feed e kill che l'effetto assume

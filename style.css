@@ -539,6 +539,7 @@ a {
 
 #partnersContainer {
   display: flex;
+  padding: 0% 2%;
   flex-direction: row;
 }
 
@@ -548,6 +549,10 @@ a {
   padding: 8%;
   align-items: center;
   align-content: center;
+}
+
+.partner {
+  width: 15%;
 }
 
 .txtmobile {
