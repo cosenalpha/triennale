@@ -4,6 +4,16 @@
   justify-content: space-between;
 }
 
+#projTitle {
+  padding-bottom: 4%;
+  font-weight: 600;
+}
+
+h1 {
+  display: block;
+  padding-bottom: 1.5%;
+}
+
 .p-text {
   font-size: 1.3rem;
   width: 47%;
