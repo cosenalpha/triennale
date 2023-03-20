@@ -143,4 +143,8 @@ a.next:hover img {
     height: 7vh;
     padding-bottom: 2%;
   }
+
+  #projCredits {
+    padding-top: 30px;
+  }
 }
