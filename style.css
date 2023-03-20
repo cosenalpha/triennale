@@ -349,6 +349,7 @@ a {
 }
 @keyframes loadingOuter {
   0% {
+    opacity: 1;
     scale: 1;
   }
   50% {
