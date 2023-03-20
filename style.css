@@ -477,8 +477,11 @@ a {
 }
 
 #projCredits {
+  font-family: neue-haas-grotesk-text;
   width: 100%;
-  text-align: center;
+  text-align: left;
+  margin: 3% 12%;
+  justify-content: space-between;
 }
 
 /* crediti */

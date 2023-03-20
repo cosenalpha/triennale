@@ -121,6 +121,7 @@ a.next:hover img {
   }
 
   .p-text {
+    font-family: "neue-haas-grotesk-text", sans-serif;
     position: relative;
     width: 100%;
     font-size: 1rem;
