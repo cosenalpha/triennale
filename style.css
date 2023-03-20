@@ -4,11 +4,10 @@
   padding: 0;
   border: 0;
   vertical-align: baseline;
-  cursor: default;
 }
 
-a {
-  cursor: pointer;
+p {
+  cursor: default;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -209,7 +208,7 @@ table {
   display: none;
 }
 
-#home{
+#home {
   display: none;
 }
 
@@ -387,7 +386,7 @@ a {
   font-weight: 600;
 } */
 
-#switch{
+#switch {
   display: flex;
 }
 
@@ -570,7 +569,7 @@ a {
     line-height: 1.6rem;
   }
 
-  #home{
+  #home {
     display: block;
   }
 
