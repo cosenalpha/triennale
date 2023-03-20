@@ -55,7 +55,7 @@
 
 #prev,
 #next {
-  height: 20vh;
+  /* height: 20vh; */
   display: flex;
 }
 
@@ -134,14 +134,8 @@ a.next:hover img {
 
   #previous,
   #next {
-    height: 7vh;
+    /* height: 7vh; */
     text-align: center;
-  }
-
-  #previous img,
-  #next img {
-    height: 7vh;
-    padding-bottom: 2%;
   }
 
   #projCredits {
