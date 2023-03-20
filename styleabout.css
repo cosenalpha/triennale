@@ -42,6 +42,14 @@
   #siti_passati {
     font-size: 1.2rem;
     line-height: 1.7rem;
+    padding: 9%;
+  }
+
+  #creditsContainer, 
+  .openSection, 
+  .partnersHeader, 
+  #partnersContainer {
+    padding: 9%;
   }
 
 }
