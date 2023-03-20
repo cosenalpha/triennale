@@ -193,7 +193,8 @@ table {
 }
 
 .text-container a,
-.text-container p {
+.text-container p,
+.icon2-container p {
   padding-left: 20px;
   font-size: 1.5rem;
   font-weight: 600;
@@ -408,9 +409,13 @@ a {
   font-weight: 600;
   /* width: 75%; */
 }
-#abstract span {
-  display: block;
-  padding-top: 0.5%;
+
+#abstracthome {
+  margin: 20vh auto;
+  text-align: center;
+  width: 60%;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 #programma {
