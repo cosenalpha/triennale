@@ -24,15 +24,20 @@
   /* padding-left: 3%; */
   font-weight: 600;
   text-decoration: none;
+  text-decoration: underline;
 }
 
 #elenco_orari {
-  font-weight: 500;
+  font-weight: 400;
+  font-family: neue-haas-grotesk-text;
   line-height: 2rem;
 }
 
+
+
 #siti_passati a {
-  font-weight: 500;
+  font-weight: 400;
+  font-family: neue-haas-grotesk-text;
 }
 
 .colp-3 {

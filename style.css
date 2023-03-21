@@ -206,6 +206,10 @@ table {
   font-weight: 600;
 }
 
+.partner {
+  width: 15%;
+}
+
 /* menu a tendina */
 .hamburger {
   display: none;
@@ -439,6 +443,7 @@ a {
   display: flex;
   flex-direction: row;
 }
+
 #evento {
   padding-left: 8px;
 }
@@ -459,6 +464,13 @@ a {
   font-weight: 600;
   text-decoration: none;
 }
+
+li {
+  font-weight: 400;
+  font-family: neue-haas-grotesk-text;
+  line-height: 2rem;
+}
+
 
 /* link ai siti passati */
 #siti_passati {
@@ -556,10 +568,6 @@ a {
   padding: 8%;
   align-items: center;
   align-content: center;
-}
-
-.partner {
-  width: 15%;
 }
 
 .txtmobile {
