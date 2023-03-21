@@ -149,7 +149,7 @@ img {
 }
 
 .nome-progetto .fill {
-  mix-blend-mode: difference; 
+  mix-blend-mode: difference;
   z-index: 4;
   opacity: 0;
   height: 40%;
