@@ -113,8 +113,6 @@ a.next:hover img {
     overflow-x: hidden;
   }
 
-  #allprojects {display: none;}
-
   .ti-container {
     flex-direction: column;
     margin: 0 7vw;
