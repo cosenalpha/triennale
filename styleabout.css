@@ -2,6 +2,7 @@
 #programma,
 #lingua,
 #instagram,
+#catalogo,
 #siti_passati {
   font-size: 1.5rem;
 }
@@ -14,6 +15,15 @@
 
 #lingua {
   padding: 6% 1% 3% 3%;
+}
+
+ /* bottone per scaricare catalogo */
+ #catalogo {
+  font-family: neue-haas-grotesk-display;
+  padding: 2% 0% 0% 3%;
+  /* padding-left: 3%; */
+  font-weight: 600;
+  text-decoration: none;
 }
 
 #elenco_orari {
