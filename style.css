@@ -523,6 +523,7 @@ a {
 .creditsParagraph div,
 #firstCredit {
   padding-top: 10%;
+  font-weight: 400;
 }
 .creditsParagraph div {
   font-weight: 600;
