@@ -7,11 +7,13 @@
 #projTitle {
   padding-bottom: 4%;
   font-weight: 600;
+  font-size: 1.3rem;
 }
 
 h1 {
   display: block;
   padding-bottom: 1.5%;
+  font-size: 2rem;
 }
 
 .p-text {
