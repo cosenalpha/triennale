@@ -8,13 +8,13 @@ body {
 #instagram,
 #catalogo,
 #siti_passati {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 #abstract {
   font-weight: 500;
-  line-height: 2rem;
   padding: 1% 3%;
+  line-height: normal;
 }
 
 #lingua {
@@ -34,7 +34,7 @@ body {
 #elenco_orari {
   font-weight: 400;
   font-family: neue-haas-grotesk-text;
-  line-height: 2rem;
+  line-height: normal;
 }
 
 #siti_passati a {
@@ -79,7 +79,7 @@ margin: 3vh 0 8vh 0; align-items: center;}
   #instagram,
   #siti_passati {
     font-size: 1.2rem;
-    line-height: 1.7rem;
+    line-height: normal;
     padding: 9%;
   }
 

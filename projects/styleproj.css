@@ -1,6 +1,6 @@
 .ti-container {
   display: flex;
-  margin: 3% 12%;
+  margin: 3% 3%;
   justify-content: space-between;
 }
 
@@ -36,9 +36,9 @@ h1 {
 }
 
 .i-container {
-  width: 76%;
-  margin: 3% 12%;
-  padding: 3% 0;
+  width: 94%;
+  margin: 3% 3%;
+  padding: 0% 0;
 }
 
 #inizio {
@@ -60,7 +60,7 @@ h1 {
 .arr-container {
   display: flex;
   justify-content: space-between;
-  margin: 2% 12%;
+  margin: 2% 3%;
 }
 
 #prev,
@@ -72,7 +72,7 @@ h1 {
 .arr-img-container {
   display: flex;
   justify-content: space-between;
-  margin: 2% 12%;
+  margin: 2% 3%;
 }
 
 .nextprev {font-size: 1.5rem; font-weight: 600;}
