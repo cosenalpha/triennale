@@ -396,11 +396,15 @@
     <!-- codice aprire sezioni tramite bottoni (nella versione mobile)-->
     <script src="app.js"></script>
     <script>
-      const creditsContainer = document.getElementById("creditsContainer");
-      const logos = document.querySelector(".container-loghi-partner");
-      // creditsContainer.style.display = "none";
+      let creditsContainer = document.getElementById("creditsContainer");
+      let logos = document.querySelector(".container-loghi-partner");
+      
+      let mobile = window.matchMedia("(max-width: 600px)")
+
+      if(mobile.matches) {creditsContainer.style.display = "none"}
 
       function openCredit() {
+        console.log(creditsContainer.style.display)
         if (creditsContainer.style.display == "none") {
           creditsContainer.style.display = "block";
           logos.style.display = "block";

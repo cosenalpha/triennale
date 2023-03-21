@@ -65,6 +65,7 @@ margin: 3vh 0 8vh 0; align-items: center;}
 
 @media only screen and (max-width: 600px) {
 
+  #creditsContainer {display: none;}
   .container-loghi-partner {padding: 0 7vw; margin-top: 5vh; display: none;}
   .elenco-loghi {flex-direction: column; justify-content: center; height: inherit;}
   .logo {margin: 25px 0; width: 80%;}
