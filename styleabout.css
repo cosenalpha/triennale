@@ -50,7 +50,27 @@ body {
   width: 13%;
 }
 
+.container-loghi-partner {width: 100%; padding: 0 3%; margin-top: 10vh;}
+
+.elenco-loghi {display: flex; width: 100%; height: 8vh;
+margin: 3vh 0 8vh 0; align-items: center;}
+
+.main-logos {height: 15vh;}
+
+.second-logos {display: flex;}
+
+.logo {height: 80%; margin-right: 50px;}
+
+.logo img {height: 100%;}
+
 @media only screen and (max-width: 600px) {
+
+  .container-loghi-partner {padding: 0 7vw;}
+  .elenco-loghi {flex-direction: column; justify-content: center; height: inherit;}
+  .logo {margin: 25px 0; width: 80%;}
+  .logo img {width: 100%; height: inherit; margin: 0;}
+  .second-logos {display: block;}
+  .container-loghi-partner h3 {text-align: center; font-size: 1.5rem; margin-top: 10vh;}
 
   #abstract,
   #programma,

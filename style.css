@@ -599,6 +599,8 @@ font-family: neue-haas-grotesk-text;
     -webkit-appearance: none;
   }
 
+  #allprojects {display: none;}
+
   #subtitle {
     top: 60vh;
     font-size: 1.5rem;
