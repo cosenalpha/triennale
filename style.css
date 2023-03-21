@@ -440,6 +440,7 @@ a {
   /* utile per distribuire gli elementi dentro il div occupando tutto lo spazio */
   display: flex;
   flex-direction: column;
+  font-variant-numeric: tabular-nums;
 }
 
 #elenco_orari ul {
