@@ -608,6 +608,12 @@ font-family: neue-haas-grotesk-text;
     line-height: 1.6rem;
   }
 
+  #abstracthome {
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    width: 93%;
+  }
+
   #home {
     display: block;
   }
