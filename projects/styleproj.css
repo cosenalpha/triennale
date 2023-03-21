@@ -75,6 +75,8 @@ h1 {
   margin: 2% 12%;
 }
 
+.nextprev {font-size: 1.5rem; font-weight: 600;}
+
 /* #prev-img,
 #next-img {
   height: 20vh;
@@ -111,6 +113,8 @@ a.next:hover img {
     overflow-x: hidden;
   }
 
+  #allprojects {display: none;}
+
   .ti-container {
     flex-direction: column;
     margin: 0 7vw;
@@ -142,6 +146,8 @@ a.next:hover img {
     display: flex;
     margin: 3vh 7vw;
   }
+
+  #projCredits {margin: 5vh 7vw;}
 
   #previous,
   #next {
