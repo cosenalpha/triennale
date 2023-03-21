@@ -425,7 +425,7 @@ a {
 }
 
 #abstracthome {
-  margin: 20vh auto;
+  margin: 20vh 3%;
   text-align: left;
   width: 60%;
   font-size: 2rem;
@@ -472,7 +472,7 @@ a {
 li {
   font-weight: 400;
   font-family: neue-haas-grotesk-text;
-  line-height: 2rem;
+  line-height: normal;
 }
 
 
@@ -480,7 +480,7 @@ li {
 #siti_passati {
   padding: 3%;
   font-size: 2rem;
-  line-height: 2rem;
+  line-height: normal;
   font-weight: 600;
   text-align: left;
 }
