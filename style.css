@@ -535,10 +535,12 @@ li {
 
 .creditsParagraph div,
 #firstCredit {
+  font-family: neue-haas-grotesk-text;
   padding-top: 10%;
   font-weight: 400;
 }
 .creditsParagraph div {
+  font-family: neue-haas-grotesk-text;
   font-weight: 600;
 }
 /* fine crediti */
