@@ -58,7 +58,8 @@
   #creditsContainer, 
   .openSection, 
   .partnersHeader, 
-  #partnersContainer {
+  #partnersContainer,
+  #catalogo {
     padding: 9%;
   }
 
