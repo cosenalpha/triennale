@@ -1,3 +1,7 @@
+body {
+  font-family: neue-haas-grotesk-text;
+}
+
 #abstract,
 #programma,
 #lingua,
@@ -63,7 +67,8 @@
   #creditsContainer, 
   .openSection, 
   .partnersHeader, 
-  #partnersContainer {
+  #partnersContainer,
+  #catalogo {
     padding: 9%;
   }
 

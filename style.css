@@ -381,6 +381,7 @@ a {
   /* utile per distribuire gli elementi dentro il div occupando tutto lo spazio */
   display: flex;
   flex-direction: row;
+  font-variant-numeric: tabular-nums;
 }
 
 /* div sulla sinistra */
