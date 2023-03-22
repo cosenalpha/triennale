@@ -142,6 +142,10 @@ a.next:hover img {
     width: 86vw;
   }
 
+  iframe {
+    padding-bottom: .5vh !important;
+  }
+
   .arr-container {
     display: flex;
     margin: 3vh 7vw;
